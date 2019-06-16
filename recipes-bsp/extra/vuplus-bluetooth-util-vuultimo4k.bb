@@ -1,0 +1,12 @@
+require vuplus-bluetooth-util.inc
+
+COMPATIBLE_MACHINE = "vuultimo4k"
+
+FIRMWARE_PATH="bcm43569"
+FIRMWARE_FILE="BCM43569A2_001.003.004.0060.0109.hcd"
+
+SRCDATE = "20171115"
+SRCDATE_PR = "r0"
+
+SRC_URI[md5sum] = "3fd6c28c3db0118becc1c85f52a199e8"
+SRC_URI[sha256sum] = "e7c4d6dde56b5b7dce4870a1c4499dc9d85014ac56efc0a00aa6a331814e5740"
