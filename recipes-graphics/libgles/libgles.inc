@@ -2,7 +2,6 @@ SECTION = "base"
 LICENSE = "CLOSED"
 
 PROVIDES = "virtual/libgles2 virtual/egl"
-COMPATIBLE_MACHINE = "vu"
 
 PV="15.1"
 PR="${SRCDATE}.${SRCDATE_PR}"
