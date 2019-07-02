@@ -26,6 +26,14 @@ EXTRA_IMAGEDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "bcmwifi", "vuplus-wifi-util-${MACHINE}", "", d)} \
 "
 
+IMAGE_INSTALL_append += "\
+	vuplus-initrd-${MACHINE} \
+	enigma2-plugin-systemplugins-bluetoothsetup \
+	vuplus-bluetooth-util-${MACHINE} \
+"
+
+IMAGE_FSTYPES =+ "ext4"
+
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "armv7ahf-neon"
 
@@ -62,7 +70,7 @@ IMAGE_CMD_tar_prepend = " \
         rm -rf vuplus; \
 "
 
-MACHINE_FEATURES += "alsa usbhost wlan kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec"
+MACHINE_FEATURES += "alsa usbhost kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec ci uianimation dvbproxy"
 
 require conf/machine/include/arm/arch-armv7a.inc
 
