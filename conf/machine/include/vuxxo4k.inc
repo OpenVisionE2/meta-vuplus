@@ -20,7 +20,6 @@ MACHINE_EXTRA_RDEPENDS += "\
 
 EXTRA_IMAGEDEPENDS += "\
 	enigma2-plugin-systemplugins-remotecontrolcode \
-	enigma2-plugin-extensions-addstreamurl \
 	vuplus-tuner-turbo \
 	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "enigma2-plugin-systemplugins-bluetoothsetup", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bcmwifi", "vuplus-wifi-util-${MACHINE}", "", d)} \
