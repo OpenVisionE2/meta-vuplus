@@ -1,4 +1,4 @@
-SRCDATE = "20180213"
+ SRCDATE = "20180213"
 SRCDATE_PR = "r1"
 
 SRC_URI[md5sum] = "c25f1899127b80475d9454546cf70c3e"
@@ -8,4 +8,4 @@ require libvugles2.inc
 
 COMPATIBLE_MACHINE = "vuuno4kse"
 
-SRC_URI = "http://archive.vuplus.com/download/build_support/vuplus/libvugles2-0.1.1-${MACHINE}-${PR}.tar.gz"
+SRC_URI = "http://archive.vuplus.com/download/build_support/vuplus/libvugles2-0.1.1-${MACHINE}-${PR}.tar.gz file://LICENSE-CLOSE"
