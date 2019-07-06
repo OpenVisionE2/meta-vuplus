@@ -30,7 +30,7 @@ KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 KERNEL_OBJECT_SUFFIX = "ko"
 KERNEL_IMAGEDEST = "tmp"
 
-FILES_kernel-image = "/${KERNEL_IMAGEDEST}/zImage"
+FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/zImage"
 
 do_configure_prepend() {
 	oe_machinstall -m 0644 ${WORKDIR}/${MACHINE}_defconfig ${WORKDIR}/defconfig
