@@ -26,3 +26,9 @@ PACKAGES = "${PN}"
 FILES_${PN} = "/usr/include /usr/lib"
 
 INSANE_SKIP_${PN} += "already-stripped dev-so file-rdeps"
+
+do_license() {
+	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
+}
+
+addtask do_license before do_populate_lic after do_unpack
