@@ -31,7 +31,7 @@ IMAGE_INSTALL_append += "\
 	vuplus-bluetooth-util-${MACHINE} \
 "
 
-IMAGE_FSTYPES =+ "ext4"
+#IMAGE_FSTYPES += "ext4"
 
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "armv7ahf-neon"
