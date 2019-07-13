@@ -39,3 +39,5 @@ do_install() {
 }
 
 INSANE_SKIP_${PN} = "already-stripped"
+
+PNBLACKLIST[vuplus-bluetooth-util-vuuno4k] = "{@bb.utils.contains("MACHINE", "vuuno4kse", "Fix muliple recipes", "", d)}" 
