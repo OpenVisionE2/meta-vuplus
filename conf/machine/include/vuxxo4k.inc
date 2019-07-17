@@ -28,7 +28,6 @@ EXTRA_IMAGEDEPENDS += "\
 IMAGE_INSTALL_append += "\
 	vuplus-initrd-${MACHINE} \
 	enigma2-plugin-systemplugins-bluetoothsetup \
-	vuplus-bluetooth-util-${MACHINE} \
 "
 
 #IMAGE_FSTYPES += "ext4"
@@ -38,7 +37,7 @@ DEFAULTTUNE = "armv7ahf-neon"
 
 DVBMEDIASINK_CONFIG = "--with-wmv --with-pcm --with-eac3 --with-h265 --with-dtsdownmix"
 
-PREFERRED_VERSION_linux-${MACHINE} = "3.14.28"
+PREFERRED_VERSION_linux-${MACHINE} = "4.1.20"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-${MACHINE}"
 
