@@ -15,8 +15,15 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/stblinux-${KSRC_VER}.tar.b
 	file://linux_dvb-core.patch \
 	file://bcmgenet-recovery-fix.patch \
 	${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "file://linux_dvb_adapter.patch", "", d)} \
+	file://bcm_genet_disable_warn.patch \
+	file://0001-STV-Add-PLS-support.patch \
+	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+	file://0001-stv090x-optimized-TS-sync-control.patch \
 	file://kernel-gcc6.patch \
 	file://kernel-gcc7.patch \
+	file://kernel-gcc9.patch \
+	file://0003-mips-kernel-ilog2-gcc7.patch \
+	file://0005-uaccess-dont-mark-register-as-const.patch \
 	file://${MACHINE}_defconfig \
 	"
 
@@ -30,7 +37,7 @@ KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 KERNEL_OBJECT_SUFFIX = "ko"
 KERNEL_IMAGEDEST = "tmp"
 
-FILES_kernel-image = "/${KERNEL_IMAGEDEST}/zImage"
+FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/zImage"
 
 do_configure_prepend() {
 	oe_machinstall -m 0644 ${WORKDIR}/${MACHINE}_defconfig ${WORKDIR}/defconfig
@@ -56,3 +63,4 @@ pkg_postinst_kernel-image () {
 
 pkg_postrm_kernel-image () {
 }
+
