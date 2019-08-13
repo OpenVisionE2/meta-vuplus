@@ -28,6 +28,7 @@ EXTRA_IMAGEDEPENDS += "\
 IMAGE_INSTALL_append += "\
 	vuplus-initrd-${MACHINE} \
 	enigma2-plugin-systemplugins-bluetoothsetup \
+	vuplus-bluetooth-util-${MACHINE} \
 "
 
 #IMAGE_FSTYPES += "ext4"
