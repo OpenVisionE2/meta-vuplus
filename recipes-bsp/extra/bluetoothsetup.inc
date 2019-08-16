@@ -3,7 +3,7 @@ DESCRIPTION = "Vuplus bluetooth plugin"
 LICENSE = "CLOSED"
 
 DEPENDS = "python-native"
-RDEPENDS_${PN} = "vuplus-bluetooth-util libusb-compat"
+RDEPENDS_${PN} = "vuplus-bluetooth-util-${MACHINE} libusb-compat"
 
 PN = "enigma2-plugin-systemplugins-bluetoothsetup"
 PR = "${SRCDATE}.${SRCDATE_PR}"

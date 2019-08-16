@@ -2,9 +2,6 @@ SECTION = "base"
 LICENSE = "CLOSED"
 #require conf/license/license-close.inc
 
-PROVIDES += "vuplus-bluetooth-util"
-RPROVIDES_${PN} += "vuplus-bluetooth-util"
-
 PR="${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = " \
