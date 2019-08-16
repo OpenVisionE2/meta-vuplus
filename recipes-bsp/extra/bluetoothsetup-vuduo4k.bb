@@ -1,8 +1,5 @@
 require bluetoothsetup.inc
 
-PROVIDES += "vuplus-bluetooth-util"
-RPROVIDES_${PN} += "vuplus-bluetooth-util"
-
 COMPATIBLE_MACHINE = "vuduo4k"
 
 SRCDATE = "20181109"
