@@ -21,13 +21,13 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 EXTRA_IMAGEDEPENDS += "\
 	enigma2-plugin-systemplugins-remotecontrolcode \
 	vuplus-tuner-turbo \
-	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "enigma2-plugin-systemplugins-bluetoothsetup", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE}", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bcmwifi", "vuplus-wifi-util-${MACHINE}", "", d)} \
 "
 
 IMAGE_INSTALL_append += "\
 	vuplus-initrd-${MACHINE} \
-	enigma2-plugin-systemplugins-bluetoothsetup \
+	enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE} \
 	vuplus-bluetooth-util-${MACHINE} \
 "
 
