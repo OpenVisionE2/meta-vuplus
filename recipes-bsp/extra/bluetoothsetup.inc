@@ -5,7 +5,6 @@ LICENSE = "CLOSED"
 DEPENDS = "python-native"
 RDEPENDS_${PN} = "vuplus-bluetooth-util-${MACHINE} libusb-compat"
 
-PN = "enigma2-plugin-systemplugins-bluetoothsetup"
 PR = "${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = " \
@@ -31,4 +30,4 @@ do_populate_sysroot[noexec] = "1"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-INSANE_SKIP_${PN} = "already-stripped"
+INSANE_SKIP_${PN} = "already-stripped file-rdeps"
