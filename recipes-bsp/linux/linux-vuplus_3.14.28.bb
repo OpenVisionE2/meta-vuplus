@@ -43,6 +43,10 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHIN
     file://CONFIG_DVB_SP2.patch \
     file://dvbsky.patch \
     file://rtl2832u-2.patch \
+    file://kernel-add-support-for-gcc9.patch \
+    file://0003-mips-kernel-ilog2-gcc7.patch \
+    file://0005-uaccess-dont-mark-register-as-const.patch \
+    file://0006-makefile-silence-packed-not-aligned-warn.patch \
     "
 
 SRC_URI_append_vuuno4k = " file://linux_prevent_usb_dma_from_bmem.patch"

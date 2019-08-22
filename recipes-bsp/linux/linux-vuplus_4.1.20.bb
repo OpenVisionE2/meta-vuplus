@@ -43,11 +43,15 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/stblinux-4.1-${KERNEL_SRC_
     file://0001-dvb-usb-fix-a867.patch \
     file://0001-Support-TBS-USB-drivers-for-4.1-kernel.patch \
     file://0001-TBS-fixes-for-4.1-kernel.patch \
+    file://bcm_genet_disable_warn.patch \
     file://0001-STV-Add-PLS-support.patch \
     file://0001-STV-Add-SNR-Signal-report-parameters.patch \
     file://blindscan2.patch \
     file://0001-stv090x-optimized-TS-sync-control.patch \
     file://kernel-add-support-for-gcc7.patch \
+    file://kernel-add-support-for-gcc9.patch \
+    file://0003-mips-kernel-ilog2-gcc7.patch \
+    file://0005-uaccess-dont-mark-register-as-const.patch \
     "
 
 SRC_URI_append = "${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", " file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)}"
