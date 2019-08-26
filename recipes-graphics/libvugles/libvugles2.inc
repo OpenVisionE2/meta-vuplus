@@ -23,7 +23,7 @@ do_install() {
 
 PACKAGES = "${PN}"
 
-FILES_${PN} = "/usr/include /usr/lib"
+FILES_${PN} = "/usr/include ${libdir}"
 
 INSANE_SKIP_${PN} += "already-stripped dev-so file-rdeps"
 
