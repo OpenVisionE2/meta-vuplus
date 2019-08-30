@@ -59,7 +59,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -rf vuplus; \
 "
 
-MACHINE_FEATURES += "alsa usbhost kernelwifi externalwifi 3dtv switchoff osdposition hdmicec ci"
+MACHINE_FEATURES += "alsa usbhost kernelwifi externalwifi 3dtv switchoff osdposition hdmicec ci blindscan-tbs"
 
 require conf/machine/include/tune-mips32.inc
 
