@@ -7,6 +7,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	kernel-module-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
+	vuplus-tuner-turbo \
 "
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
