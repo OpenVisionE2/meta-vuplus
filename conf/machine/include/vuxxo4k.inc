@@ -73,6 +73,8 @@ IMAGE_CMD_tar_prepend = " \
 
 MACHINE_FEATURES += "alsa usbhost kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec ci uianimation dvbproxy blindscan-tbs"
 
+MTD_BLACK  = "mmcblk0"
+
 require conf/machine/include/arm/arch-armv7a.inc
 
 BOX_BRAND = "vuplus"
