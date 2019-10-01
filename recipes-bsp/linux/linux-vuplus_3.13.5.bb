@@ -46,6 +46,9 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://kernel-add-support-for-gcc6.patch \
     file://genksyms_fix_typeof_handling.patch \
     file://kernel-add-support-for-gcc7.patch \
+    file://kernel-add-support-for-gcc9.patch \
+    file://0003-mips-kernel-ilog2-gcc7.patch \
+    file://kernel-gcc9.patch \
     file://test.patch \
     file://0001-tuners-tda18273-silicon-tuner-driver.patch \
     file://T220-kern-13.patch \
