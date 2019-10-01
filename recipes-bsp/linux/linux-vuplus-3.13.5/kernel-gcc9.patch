@@ -1,0 +1,14 @@
+diff -Nur linux.old/Makefile linux/Makefile
+--- linux.old/Makefile	2019-10-01 19:49:18.029173152 +0200
++++ linux/Makefile	2019-10-01 19:29:29.864969680 +0200
+@@ -376,7 +376,9 @@
+ 		   -fno-strict-aliasing -fno-common \
+ 		   -Werror-implicit-function-declaration \
+ 		   -Wno-format-security \
+-		   -fno-delete-null-pointer-checks
++		   -fno-delete-null-pointer-checks \
++		   -Wno-attribute-alias \
++		   -Wno-bool-operation
+ KBUILD_AFLAGS_KERNEL :=
+ KBUILD_CFLAGS_KERNEL :=
+ KBUILD_AFLAGS   := -D__ASSEMBLY__
