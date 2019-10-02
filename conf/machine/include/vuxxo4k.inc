@@ -40,7 +40,7 @@ IMAGE_INSTALL_append += "\
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "armv7ahf-neon"
 
-DVBMEDIASINK_CONFIG = "--with-wmv --with-pcm --with-eac3 --with-h265 --with-dtsdownmix --with-amr --with-dts --with-h265"
+DVBMEDIASINK_CONFIG = "--with-wmv --with-pcm --with-eac3 --with-h265 --with-dtsdownmix --with-amr --with-dts"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-vuplus"
 
