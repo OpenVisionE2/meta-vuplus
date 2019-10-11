@@ -33,3 +33,5 @@ pkg_postinst_${PN} () {
         fi
         true
 }
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/vuplus-dvb-modules:"
