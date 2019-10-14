@@ -5,7 +5,6 @@ LICENSE = "CLOSED"
 PROVIDES += "vuplus-wifi-util"
 RPROVIDES_${PN} += "vuplus-wifi-util"
 
-PV="16.1"
 PR="${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = " \
