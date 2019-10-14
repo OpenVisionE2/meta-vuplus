@@ -14,4 +14,4 @@ pkg_postinst_${PN}_append () {
 SRC_URI[md5sum] = "1164965d7320771be5759ee5529a4356"
 SRC_URI[sha256sum] = "aa29212c412eb538ad7897701589f5b8f692b660b9d0d2ca4be9a08118b5eece"
 
-COMPATIBLE_MACHINE = "vuduo4k"
+COMPATIBLE_MACHINE = "^(vuduo4k)$"

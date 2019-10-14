@@ -1,6 +1,6 @@
 require vuplus-tuner-turbo.inc
 
-COMPATIBLE_MACHINE = "vusolo4k"
+COMPATIBLE_MACHINE = "^(vusolo4k)$"
 
 KV = "3.14.28"
 SRCDATE_arm = "20151104"

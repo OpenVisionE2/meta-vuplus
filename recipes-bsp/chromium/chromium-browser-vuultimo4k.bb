@@ -4,4 +4,4 @@ SRC_URI[sha256sum]="8190d285bd7481f8b1cef948b58cbf7d3f7a5e08e0d3e5288517bb3ed763
 
 require chromium-browser.inc
 
-COMPATIBLE_MACHINE = "vuultimo4k"
+COMPATIBLE_MACHINE = "^(vuultimo4k)$"

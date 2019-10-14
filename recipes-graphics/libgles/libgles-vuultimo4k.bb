@@ -1,6 +1,6 @@
 require libgles.inc
 
-COMPATIBLE_MACHINE = "vuultimo4k"
+COMPATIBLE_MACHINE = "^(vuultimo4k)$"
 
 SRCDATE = "20190424"
 SRCDATE_PR = "r0"

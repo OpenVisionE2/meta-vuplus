@@ -10,4 +10,4 @@ FILES_vuplus-blindscan-dvbc-utils-${MACHINE} = "\
 	${bindir}/bcm3466 \
 "
 
-COMPATIBLE_MACHINE = "vuduo4k"
+COMPATIBLE_MACHINE = "^(vuduo4k)$"

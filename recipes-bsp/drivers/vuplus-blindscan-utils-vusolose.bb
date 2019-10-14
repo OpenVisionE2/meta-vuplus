@@ -1,3 +1,3 @@
 require vuplus-blindscan-utils.inc
 
-COMPATIBLE_MACHINE = "vusolose"
+COMPATIBLE_MACHINE = "^(vusolose)$"

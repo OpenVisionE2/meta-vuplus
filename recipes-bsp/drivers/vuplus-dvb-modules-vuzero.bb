@@ -8,7 +8,7 @@ SRCDATE = "20190715"
 SRC_URI[md5sum] = "d6de2bbb3dc4dadc6fbea49420464493"
 SRC_URI[sha256sum] = "99132a0f1321970efc726e6c4fd71fc237865347d9dd4bf3e365e817226b0349"
 
-COMPATIBLE_MACHINE = "vuzero"
+COMPATIBLE_MACHINE = "^(vuzero)$"
 
 inherit update-rc.d
 

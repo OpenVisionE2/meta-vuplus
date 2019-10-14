@@ -1,6 +1,6 @@
 require vuplus-wifi-util.inc
 
-COMPATIBLE_MACHINE = "vuultimo4k"
+COMPATIBLE_MACHINE = "^(vuultimo4k)$"
 
 PV="16.1"
 SRCDATE = "20161108"

@@ -1,6 +1,6 @@
 require vuplus-tuner-turbo.inc
 
-COMPATIBLE_MACHINE = "vusolo"
+COMPATIBLE_MACHINE = "^(vusolo)$"
 
 KV = "3.9.6_R2"
 

@@ -17,4 +17,4 @@ do_install_append() {
 SRC_URI[md5sum] = "72eebdf84230f6eed7bf470c45d8110d"
 SRC_URI[sha256sum] = "25a237ca401595b4ee765f8839dd86d696df34d9f60b23aac84f69ac102fbb25"
 
-COMPATIBLE_MACHINE = "vuduo4k"
+COMPATIBLE_MACHINE = "^(vuduo4k)$"
