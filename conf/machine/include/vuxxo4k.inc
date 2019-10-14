@@ -18,10 +18,6 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	ntfs-3g \
 "
 
-MACHINE_EXTRA_RDEPENDS += "\
-	kernel-module-sr-mod \
-"
-
 EXTRA_IMAGEDEPENDS += "\
 	enigma2-plugin-systemplugins-remotecontrolcode \
 	vuplus-tuner-turbo \
