@@ -1,6 +1,6 @@
 require bluetoothsetup.inc
 
-COMPATIBLE_MACHINE = "vusolo4k"
+COMPATIBLE_MACHINE = "^(vusolo4k)$"
 
 SRCDATE = "20180208"
 SRCDATE_PR = "r2"

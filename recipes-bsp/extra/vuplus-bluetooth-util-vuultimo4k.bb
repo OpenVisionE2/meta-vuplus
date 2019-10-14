@@ -1,6 +1,6 @@
 require vuplus-bluetooth-util.inc
 
-COMPATIBLE_MACHINE = "vuultimo4k"
+COMPATIBLE_MACHINE = "^(vuultimo4k)$"
 
 FIRMWARE_PATH="bcm43569"
 FIRMWARE_FILE="BCM43569A2_001.003.004.0060.0109.hcd"

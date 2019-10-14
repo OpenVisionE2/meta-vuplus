@@ -1,6 +1,6 @@
 require vuplus-platform-util.inc
 
-COMPATIBLE_MACHINE = "vusolo2"
+COMPATIBLE_MACHINE = "^(vusolo2)$"
 
 SRCDATE = "20190429"
 SRCDATE_PR = "r0"

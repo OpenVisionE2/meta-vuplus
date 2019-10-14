@@ -6,6 +6,6 @@ SRC_URI[sha256sum] = "d0a35911adb933919988c53896e32935b3034b41f2daded2ebd8c167ad
 
 require libvugles2.inc
 
-COMPATIBLE_MACHINE = "vuultimo4k"
+COMPATIBLE_MACHINE = "^(vuultimo4k)$"
 
 SRC_URI = "http://archive.vuplus.com/download/build_support/vuplus/libvugles2-0.1.1-${MACHINE}-${PR}.tar.gz file://LICENSE-CLOSE"

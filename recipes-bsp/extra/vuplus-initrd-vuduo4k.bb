@@ -9,4 +9,4 @@ SRCDATE = "20181030"
 SRC_URI[md5sum] = "2280778c1a445ea7727268597ac559be"
 SRC_URI[sha256sum] = "42d3bac078edfc0c80d82caad708fdb4eca5cef5d130e7fc2e6fafdb11e66b64"
 
-COMPATIBLE_MACHINE = "vuduo4k"
+COMPATIBLE_MACHINE = "^(vuduo4k)$"

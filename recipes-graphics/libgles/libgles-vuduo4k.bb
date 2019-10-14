@@ -1,6 +1,6 @@
 require libgles.inc
 
-COMPATIBLE_MACHINE = "vuduo4k"
+COMPATIBLE_MACHINE = "^(vuduo4k)$"
 
 SRCDATE = "20191014"
 SRCDATE_PR = "r0"
