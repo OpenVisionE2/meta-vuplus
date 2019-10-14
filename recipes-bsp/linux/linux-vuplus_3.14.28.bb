@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr
 
-COMPATIBLE_MACHINE = "vusolo4k|vuultimo4k|vuuno4k"
+COMPATIBLE_MACHINE = "^(vusolo4k|vuultimo4k|vuuno4k)$"
 
 MODULE = "linux-3.14.28"
 

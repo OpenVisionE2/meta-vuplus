@@ -18,4 +18,4 @@ do_install() {
         update-rc.d -r ${D} vuplus-shutdown start 89 0 .
 }
 
-COMPATIBLE_MACHINE = "vuduo|vuduo2|vuduo4k|vusolo|vusolo2|vusolo4k|vusolose|vuultimo|vuultimo4k|vuuno|vuuno4k|vuuno4kse|vuzero|vuzero4k"
+COMPATIBLE_MACHINE = "^(vuduo|vuduo2|vuduo4k|vusolo|vusolo2|vusolo4k|vusolose|vuultimo|vuultimo4k|vuuno|vuuno4k|vuuno4kse|vuzero|vuzero4k)$"
