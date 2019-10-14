@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr
 
-COMPATIBLE_MACHINE = "vuuno4kse|vuzero4k"
+COMPATIBLE_MACHINE = "^(vuuno4kse|vuzero4k)$"
 
 MODULE = "linux-4.1.20"
 

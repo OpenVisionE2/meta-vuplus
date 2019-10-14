@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr
 
-COMPATIBLE_MACHINE = "vuduo2|vusolo2|vusolose|vuzero"
+COMPATIBLE_MACHINE = "^(vuduo2|vusolo2|vusolose|vuzero)$"
 
 KV = "3.13.5"
 
