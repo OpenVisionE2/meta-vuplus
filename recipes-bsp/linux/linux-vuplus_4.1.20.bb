@@ -48,9 +48,6 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/stblinux-4.1-${KERNEL_SRC_
     file://blindscan2.patch \
     file://0001-stv090x-optimized-TS-sync-control.patch \
     file://kernel-add-support-for-gcc7.patch \
-    file://kernel-add-support-for-gcc8.patch \
-    file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
-    file://0003-dont-mark-register-as-const.patch \
     "
 
 SRC_URI_append = "${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", " file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)}"
