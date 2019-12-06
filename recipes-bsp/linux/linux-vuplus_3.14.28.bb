@@ -28,15 +28,12 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHIN
     file://rt2800usb_fix_warn_tx_status_timeout_to_dbg.patch \
     file://usb_core_hub_msleep.patch \
     file://rtl8712_fix_build_error.patch \
-    file://kernel-add-support-for-gcc6.patch \
     file://0001-Support-TBS-USB-drivers.patch \
     file://0001-STV-Add-PLS-support.patch \
     file://0001-STV-Add-SNR-Signal-report-parameters.patch \
     file://0001-stv090x-optimized-TS-sync-control.patch \
     file://blindscan2.patch \
     file://genksyms_fix_typeof_handling.patch \
-    file://kernel-add-support-for-gcc7.patch \
-    file://kernel-add-support-for-gcc8.patch \
     file://0003-mips-kernel-ilog2-gcc7.patch \
     file://0003-3.x-uaccess-dont-mark-register-as-const.patch \
     file://0001-tuners-tda18273-silicon-tuner-driver.patch \
