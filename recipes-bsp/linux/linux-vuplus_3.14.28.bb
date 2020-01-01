@@ -35,9 +35,6 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHIN
     file://0001-stv090x-optimized-TS-sync-control.patch \
     file://blindscan2.patch \
     file://genksyms_fix_typeof_handling.patch \
-    file://kernel-add-support-for-gcc7.patch \
-    file://kernel-add-support-for-gcc8.patch \
-    file://0003-mips-kernel-ilog2-gcc7.patch \
     file://0003-3.x-uaccess-dont-mark-register-as-const.patch \
     file://0001-tuners-tda18273-silicon-tuner-driver.patch \
     file://01-10-si2157-Silicon-Labs-Si2157-silicon-tuner-driver.patch \
@@ -63,7 +60,7 @@ KERNEL_OBJECT_SUFFIX = "ko"
 KERNEL_IMAGEDEST = "tmp"
 KERNEL_OUTPUT = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 
-FILES_kernel-image = "/${KERNEL_IMAGEDEST}/zImage"
+FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/zImage"
 
 kernel_do_install_append() {
         install -d ${D}/${KERNEL_IMAGEDEST}
