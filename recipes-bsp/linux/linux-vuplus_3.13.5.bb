@@ -35,15 +35,15 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
     file://linux-tcp_output.patch \
     file://linux-3.13-gcc-4.9.3-build-error-fixed.patch \
-    file://kernel-add-support-for-gcc5.patch \
     file://rtl8712-fix-warnings.patch \
     file://0001-Support-TBS-USB-drivers-3.13.patch \
     file://0001-STV-Add-PLS-support.patch \
     file://0001-STV-Add-SNR-Signal-report-parameters.patch \
     file://0001-stv090x-optimized-TS-sync-control.patch \
+    file://0002-cp1emu-do-not-use-bools-for-arithmetic.patch \
+    file://0003-log2-give-up-on-gcc-constant-optimizations.patch \
     file://blindscan2.patch \
     ${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)} \
-    file://kernel-add-support-for-gcc6.patch \
     file://genksyms_fix_typeof_handling.patch \
     file://test.patch \
     file://0001-tuners-tda18273-silicon-tuner-driver.patch \
