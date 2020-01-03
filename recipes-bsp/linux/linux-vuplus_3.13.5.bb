@@ -45,6 +45,7 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://blindscan2.patch \
     ${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)} \
     file://genksyms_fix_typeof_handling.patch \
+    file://kernel-add-support-for-gcc9.patch \
     file://test.patch \
     file://0001-tuners-tda18273-silicon-tuner-driver.patch \
     file://T220-kern-13.patch \
@@ -55,9 +56,11 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     "
 
 SRC_URI_append_vuduo2 = "file://brcm_s3_wol.patch;patch=1;pnum=1 "
+
 SRC_URI_append_vusolose = "file://brcm_s3_wol.patch;patch=1;pnum=1 \
-                          file://linux_mtd_bbt_maxblock.patch \
-"
+    file://linux_mtd_bbt_maxblock.patch \
+    "
+
 SRC_URI_append_vusolo2 = "file://linux-bcm_ethernet.patch;patch=1;pnum=1 "
 
 SRC_URI_append_vuzero = "file://linux_nand_bcm.patch "
