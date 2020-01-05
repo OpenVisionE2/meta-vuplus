@@ -44,6 +44,7 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHIN
     file://0004-log2-give-up-on-gcc-constant-optimizations.patch \
     file://0005-uaccess-dont-mark-register-as-const.patch \
     file://0006-makefile-disable-warnings.patch \
+    file://kernel-add-support-for-gcc9.patch \
     "
 
 SRC_URI_append_vuuno4k = " file://linux_prevent_usb_dma_from_bmem.patch"
