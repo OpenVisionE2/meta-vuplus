@@ -34,4 +34,3 @@ do_install() {
 	install -m 0644 ${S}/bcm43569_iton.nvm ${D}/lib/firmware/bcm43569/
 }
 
-INSANE_SKIP_${PN} = "already-stripped"

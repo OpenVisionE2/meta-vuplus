@@ -25,7 +25,6 @@ PACKAGES = "${PN}"
 
 FILES_${PN} = "/usr/include ${libdir}"
 
-INSANE_SKIP_${PN} += "already-stripped dev-so file-rdeps"
 
 do_license() {
 	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE

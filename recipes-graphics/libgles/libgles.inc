@@ -28,4 +28,3 @@ FILES_${PN}="${libdir}"
 
 RPROVIDES_${PN} = "libEGL.so libGLESv2.so libdvb_base.so libdvb_client.so libnxpl.so libv3ddriver.so"
 
-INSANE_SKIP_${PN} = "already-stripped"

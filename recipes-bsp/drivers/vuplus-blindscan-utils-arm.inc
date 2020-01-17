@@ -60,4 +60,3 @@ INHIBIT_PACKAGE_STRIP = "1"
 
 PACKAGE_ARCH := "${MACHINE_ARCH}"
 
-INSANE_SKIP_${PN} = "already-stripped"
