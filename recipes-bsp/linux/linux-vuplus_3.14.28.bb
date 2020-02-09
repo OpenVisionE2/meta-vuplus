@@ -23,6 +23,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHINE} \
     file://defconfig \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
     file://bcm_genet_disable_warn.patch \
     file://linux_dvb-core.patch \
     file://rt2800usb_fix_warn_tx_status_timeout_to_dbg.patch \
@@ -44,16 +45,15 @@ SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHIN
     file://0004-log2-give-up-on-gcc-constant-optimizations.patch \
     file://0005-uaccess-dont-mark-register-as-const.patch \
     file://0006-makefile-disable-warnings.patch \
-    file://kernel-add-support-for-gcc9.patch \
     "
 
-SRC_URI_append_vuuno4k = " file://linux_prevent_usb_dma_from_bmem.patch"
+SRC_URI_append_vuuno4k += "file://linux_prevent_usb_dma_from_bmem.patch"
 
-SRC_URI_append_vusolo4k = " file://linux_rpmb_not_alloc.patch file://fix_mmc_3.14.28-1.10.patch"
+SRC_URI_append_vusolo4k += "file://linux_rpmb_not_alloc.patch file://fix_mmc_3.14.28-1.10.patch"
 
-SRC_URI_append_vuultimo4k = " file://bcmsysport_3.14.28-1.12.patch file://linux_prevent_usb_dma_from_bmem.patch"
+SRC_URI_append_vuultimo4k += "file://bcmsysport_3.14.28-1.12.patch file://linux_prevent_usb_dma_from_bmem.patch"
 
-SRC_URI_append = "${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", " file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)}"
+SRC_URI_append = "${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)}"
 
 S = "${WORKDIR}/linux"
 B = "${WORKDIR}/build"

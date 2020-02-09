@@ -19,6 +19,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/linux/COPYING;md5=d7810fab7487fb0aad327b76
 
 SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://defconfig \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
     file://add-dmx-source-timecode.patch \
     file://af9015-output-full-range-SNR.patch \
     file://af9033-output-full-range-SNR.patch \
@@ -55,7 +56,7 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://dvbsky-t330.patch \
     "
 
-SRC_URI_append_vuultimo = "file://fixed_mtd.patch "
+SRC_URI_append_vuultimo += "file://fixed_mtd.patch"
 
 S = "${WORKDIR}/linux"
 B = "${WORKDIR}/build"
