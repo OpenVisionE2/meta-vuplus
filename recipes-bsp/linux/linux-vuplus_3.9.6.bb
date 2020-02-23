@@ -58,7 +58,7 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://makefile-silence-warnings.patch \
 "
 
-SRC_URI_append_vuultimo += "file://fixed_mtd.patch"
+SRC_URI_append_vuultimo += " file://fixed_mtd.patch"
 
 S = "${WORKDIR}/linux"
 B = "${WORKDIR}/build"
