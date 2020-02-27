@@ -25,7 +25,6 @@ PACKAGES = "${PN}"
 
 FILES_${PN} = "/usr/include ${libdir}"
 
-
 do_license() {
 	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
 }
