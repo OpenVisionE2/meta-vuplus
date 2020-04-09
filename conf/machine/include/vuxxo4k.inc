@@ -70,6 +70,8 @@ IMAGE_CMD_tar_prepend = " \
 
 MACHINE_FEATURES += "alsa usbhost kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec ci uianimation dvbproxy blindscan-tbs vuplus"
 
+KERNEL_FILE = "kernel_auto.bin"
+ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_BLACK  = "mmcblk0"
 
 require conf/machine/include/arm/arch-armv7a.inc

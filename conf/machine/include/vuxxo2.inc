@@ -25,6 +25,11 @@ EXTRA_IMAGEDEPENDS += "\
 	vuplus-tuner-turbo \
 "
 
+MTD_KERNEL = "mtd2"
+MTD_ROOTFS = "mtd0"
+KERNEL_FILE = "kernel_cfe_auto.bin"
+ROOTFS_FILE = "root_cfe_auto.bin"
+
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE = "mips32el"
 
