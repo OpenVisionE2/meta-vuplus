@@ -1,4 +1,4 @@
-SUMMARY = "vuplus-hdmi-in-helper"
+SUMMARY = "VuPlus HDMI-In helper"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = "file://update_systemconfig_arm;md5=39018f970452e01743a00a4ff642c099"
