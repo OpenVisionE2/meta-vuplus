@@ -23,7 +23,7 @@ do_install() {
 
 PACKAGES = "${PN}"
 
-FILES_${PN} = "/usr/include ${libdir}"
+FILES_${PN} = "${incdir} ${libdir}"
 
 do_license() {
 	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
