@@ -23,7 +23,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHINE} \
     file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
     file://bcm_genet_disable_warn.patch \
     file://linux_dvb-core.patch \
     file://rt2800usb_fix_warn_tx_status_timeout_to_dbg.patch \
