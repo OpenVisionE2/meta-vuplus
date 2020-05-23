@@ -65,6 +65,7 @@ IMAGE_CMD_tar_prepend = " \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
         cd ${IMGDEPLOYDIR}; \
         zip ${IMAGE_NAME}_usb.zip vuplus/${UPDATE_DIR}/*; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
         rm -rf vuplus; \
 "
 
