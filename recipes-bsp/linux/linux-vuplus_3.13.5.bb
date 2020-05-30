@@ -4,7 +4,7 @@ SECTION = "kernel"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 COMPATIBLE_MACHINE = "^(vuduo2|vusolo2|vusolose|vuzero)$"
 
