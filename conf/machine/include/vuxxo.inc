@@ -15,7 +15,6 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 MACHINE_EXTRA_RRECOMMENDS = " \
 	vuplus-shutdown \
 	gstreamer1.0-plugin-dvbmediasink \
-	ntfs-3g \
 "
 
 EXTRA_IMAGEDEPENDS += "\
