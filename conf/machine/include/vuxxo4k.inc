@@ -68,7 +68,7 @@ IMAGE_CMD_tar_prepend = " \
         rm -rf vuplus; \
 "
 
-MACHINE_FEATURES += "alsa usbhost kernelwifi extrakernelwifi 3dtv switchoff osdposition hdmicec ci uianimation dvbproxy blindscan-tbs vuplus emmc mmc dvb-c blindscan-dvbc blindscan-dvbs ctrlrc"
+MACHINE_FEATURES += "alsa usbhost 3dtv switchoff osdposition hdmicec ci uianimation dvbproxy blindscan-tbs vuplus emmc mmc dvb-c blindscan-dvbc blindscan-dvbs ctrlrc"
 
 KERNEL_FILE = "kernel_auto.bin"
 ROOTFS_FILE = "rootfs.tar.bz2"
