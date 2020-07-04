@@ -1,6 +1,6 @@
 require vuplus-dvb-modules.inc
 
-DOWNLOADMACHINE = "bm750"
+MACHINETYPE = "bm750"
 
 SRCDATE = "20151124"
 SRC_URI[md5sum] = "e1246b47970cfa641ecc81cd633167dc"
