@@ -6,8 +6,6 @@ LICENSE = "CLOSED"
 KV = "3.9.6"
 PV = "${KV}+${SRCDATE}"
 
-MACHINETYPE = "${MACHINE}"
-
 SRC_URI = "http://archive.vuplus.com/download/drivers/vuplus-dvb-modules-${MACHINETYPE}-${KV}-${SRCDATE}.tar.gz"
 
 S = "${WORKDIR}"
