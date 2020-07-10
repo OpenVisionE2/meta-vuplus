@@ -47,8 +47,7 @@ PREFERRED_PROVIDER_virtual/libgles2 = "libgles-${MACHINE}"
 
 IMAGE_FSTYPES ?= "tar.bz2"
 
-IMAGEDIR ?= "${MACHINE}"
-IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
+FORCE_REBOOT_OPTION ?= "reboot"
 
 IMAGE_CMD_tar_prepend = " \
         mkdir -p ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}; \

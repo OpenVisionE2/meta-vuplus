@@ -50,8 +50,6 @@ UBI_VOLNAME = "rootfs"
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c ${MKFS_UBI_MAX_ERASE_BLK_COUNT}"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
-IMAGEDIR ?= "${MACHINE}"
-IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 EXTRA_IMAGECMD_COMPAT = " --eraseblock=0x20000 -n -l "
 
 IMAGE_CMD_ubi_prepend = " \
@@ -60,6 +58,8 @@ IMAGE_CMD_ubi_prepend = " \
 	rm -rf ${IMAGE_ROOTFS}/tmp/vmlinux.gz; \
 	rm -rf ${IMAGE_ROOTFS}/boot/initrd_cfe_auto.bin; \
 "
+
+FORCE_REBOOT_OPTION ?= "force"
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}; \
