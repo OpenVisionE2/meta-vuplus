@@ -1,15 +1,15 @@
 SECTION = "base"
 LICENSE = "CLOSED"
 
-PV="15.1"
-PR="${SRCDATE}.${SRCDATE_PR}"
+PV = "15.1"
+PR = "${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = " \
     http://archive.vuplus.com/download/build_support/vuplus/platform-util-${MACHINE}-${PV}-${PR}.tar.gz \
     file://${INITSCRIPT_NAME}.sysvinit \
 "
 
-S="${WORKDIR}/platform-util-${MACHINE}"
+S = "${WORKDIR}/platform-util-${MACHINE}"
 
 do_install() {
 	install -d ${D}${bindir}
@@ -23,7 +23,7 @@ do_install() {
 do_package_qa[noexec] = "1"
 
 PACKAGE_ARCH := "${MACHINE_ARCH}"
-FILES_${PN}="/"
+FILES_${PN} = "/"
 
 inherit update-rc.d
 

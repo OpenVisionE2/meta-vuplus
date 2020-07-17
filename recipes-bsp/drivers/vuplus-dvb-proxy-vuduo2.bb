@@ -4,8 +4,8 @@ SRCDATE = "20190429"
 SRCDATE_PR = "r0"
 
 pkg_postinst_${PN}_append () {
-	if [ ! -f $D/lib/modules/${KERNEL_VERSION}/extra/dvb-bcm.ko ]; then
-		ln -s /lib/modules/${KERNEL_VERSION}/extra/dvb-bcm7424.ko $D/lib/modules/${KERNEL_VERSION}/extra/dvb-bcm.ko
+	if [ ! -f $D${base_libdir}/modules/${KERNEL_VERSION}/extra/dvb-bcm.ko ]; then
+		ln -s ${base_libdir}/modules/${KERNEL_VERSION}/extra/dvb-bcm7424.ko $D${base_libdir}/modules/${KERNEL_VERSION}/extra/dvb-bcm.ko
 	fi
 }
 
