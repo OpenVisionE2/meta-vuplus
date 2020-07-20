@@ -12,7 +12,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
-MACHINE_EXTRA_RRECOMMENDS = " \
+MACHINE_EXTRA_RRECOMMENDS += "\
 	vuplus-shutdown \
 	gstreamer1.0-plugin-dvbmediasink \
 "
@@ -64,7 +64,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -rf vuplus; \
 "
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci blindscan-tbs vuplus"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci blindscan-tbs vuplus HDMI SCART"
 
 require conf/machine/include/tune-mips32.inc
 

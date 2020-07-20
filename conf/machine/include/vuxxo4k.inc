@@ -12,7 +12,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
-MACHINE_EXTRA_RRECOMMENDS = " \
+MACHINE_EXTRA_RRECOMMENDS += "\
 	vuplus-shutdown \
 	gstreamer1.0-plugin-dvbmediasink \
 "
@@ -67,7 +67,7 @@ IMAGE_CMD_tar_prepend = " \
         rm -rf vuplus; \
 "
 
-MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci uianimation dvbproxy blindscan-tbs vuplus emmc mmc dvb-c blindscan-dvbc blindscan-dvbs ctrlrc"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci uianimation dvbproxy blindscan-tbs vuplus emmc mmc dvb-c blindscan-dvbc blindscan-dvbs ctrlrc bluetooth HDMI"
 
 KERNEL_FILE = "kernel_auto.bin"
 ROOTFS_FILE = "rootfs.tar.bz2"
