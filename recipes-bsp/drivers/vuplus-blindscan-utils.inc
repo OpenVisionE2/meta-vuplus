@@ -36,40 +36,6 @@ do_install() {
 	install -m 0755 "${S}/tda1002x" "${D}/${bindir}"
 }
 
-do_install_vuuno() {
-        install -d "${D}/${bindir}"
-        for f in ${PLUGABLE_MODEL_BLINDSCAN}; do
-                install -m 0755 "${S}/$f" "${D}/${bindir}"
-        done
-}
-
-do_install_vuultimo() {
-        install -d "${D}/${bindir}"
-        for f in ${PLUGABLE_MODEL_BLINDSCAN}; do
-                install -m 0755 "${S}/$f" "${D}/${bindir}"
-        done
-}
-
-do_install_vuduo2() {
-        install -d "${D}/${bindir}"
-        for f in ${PLUGABLE_MODEL_BLINDSCAN}; do
-                install -m 0755 "${S}/$f" "${D}/${bindir}"
-        done
-}
-
-do_install_vusolose() {
-        install -d "${D}/${bindir}"
-        for f in ${PLUGABLE_MODEL_BLINDSCAN}; do
-                install -m 0755 "${S}/$f" "${D}/${bindir}"
-        done
-}
-
-do_install_vusolo2() {
-	install -d "${D}/${bindir}"
-	install -m 0755 "${S}/tda1002x" "${D}/${bindir}"
-	install -m 0755 "${S}/vuplus_bcm7346_blindscan" "${D}/${bindir}"
-}
-
 FILES_vuplus-blindscan-dvbs-utils-${MACHINE} = "\
 	${bindir}/vuplus_blindscan \
 	${bindir}/vuplus_6211_blindscan \
@@ -89,4 +55,4 @@ FILES_vuplus-blindscan-dvbc-utils-${MACHINE} = "\
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-PACKAGE_ARCH := "${MACHINE_ARCH}"
+BLINDSCAN_BINARY = "vuplus_blindscan"

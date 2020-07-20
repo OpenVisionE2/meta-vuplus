@@ -8,5 +8,3 @@ FILES_vuplus-blindscan-dvbc-utils-${MACHINE} = "\
 	${bindir}/tt3l10_t2_scan \
 	${bindir}/tt2l08_t2_scan \
 "
-
-COMPATIBLE_MACHINE = "^(vusolo4k)$"

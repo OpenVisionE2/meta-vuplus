@@ -58,5 +58,4 @@ FILES_vuplus-blindscan-dvbc-utils-${MACHINE} = "\
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-PACKAGE_ARCH := "${MACHINE_ARCH}"
-
+BLINDSCAN_BINARY = "vuplus_blindscan"
