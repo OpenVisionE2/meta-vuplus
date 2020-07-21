@@ -69,3 +69,5 @@ MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci blindscan-tbs
 require conf/machine/include/tune-mips32.inc
 
 BOX_BRAND = "vuplus"
+
+STB_PLATFORM = "vu1gen"

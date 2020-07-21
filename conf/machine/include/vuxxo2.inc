@@ -82,3 +82,5 @@ require conf/machine/include/tune-mips32.inc
 HOSTTOOLS += "sshpass"
 
 BOX_BRAND = "vuplus"
+
+STB_PLATFORM = "vu2gen"

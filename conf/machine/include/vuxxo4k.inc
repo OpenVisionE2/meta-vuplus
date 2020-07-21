@@ -76,3 +76,5 @@ MTD_BLACK  = "mmcblk0"
 require conf/machine/include/arm/arch-armv7a.inc
 
 BOX_BRAND = "vuplus"
+
+STB_PLATFORM = "vu4kgen"
