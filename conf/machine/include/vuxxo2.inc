@@ -61,15 +61,17 @@ IMAGE_CMD_ubi_prepend = " \
 
 FORCE_REBOOT_OPTION ?= "force"
 
+IMAGEDIR = "vuplus/${UPDATE_DIR}"
+
 IMAGE_CMD_ubi_append = " \
-	mkdir -p ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}; \
-	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/root_cfe_auto.bin; \
-	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.vmlinux.gz ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/kernel_cfe_auto.bin; \
-	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.initrd_cfe_auto.bin ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/initrd_cfe_auto.bin; \
-	touch ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/${FORCE_REBOOT_OPTION}.update; \
+	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
+	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/root_cfe_auto.bin; \
+	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.vmlinux.gz ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel_cfe_auto.bin; \
+	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.initrd_cfe_auto.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/initrd_cfe_auto.bin; \
+	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/${FORCE_REBOOT_OPTION}.update; \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}; \
-	zip ${IMAGE_NAME}_usb.zip vuplus/${UPDATE_DIR}/*; \
+	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -rf vuplus; \

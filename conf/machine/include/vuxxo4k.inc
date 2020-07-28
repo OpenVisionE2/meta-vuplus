@@ -49,20 +49,22 @@ IMAGE_FSTYPES ?= "tar.bz2"
 
 FORCE_REBOOT_OPTION ?= "reboot"
 
+IMAGEDIR = "vuplus/${UPDATE_DIR}"
+
 IMAGE_CMD_tar_prepend = " \
-        mkdir -p ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}; \
-        cp -f ${IMAGE_ROOTFS}/tmp/zImage ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/kernel_auto.bin; \
-        cp -f ${IMAGE_ROOTFS}/boot/initrd_auto.bin ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/initrd_auto.bin; \
-	touch ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/${FORCE_REBOOT_OPTION}.update; \
+        mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
+        cp -f ${IMAGE_ROOTFS}/tmp/zImage ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel_auto.bin; \
+        cp -f ${IMAGE_ROOTFS}/boot/initrd_auto.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/initrd_auto.bin; \
+	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/${FORCE_REBOOT_OPTION}.update; \
         rm -rf ${IMAGE_ROOTFS}/tmp/zImage; \
         rm -rf ${IMAGE_ROOTFS}/boot/initrd_auto.bin; \
         cd ${IMAGE_ROOTFS}; \
         tar -cvf ${IMGDEPLOYDIR}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
-        mv -f ${IMGDEPLOYDIR}/rootfs.tar ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/rootfs.tar; \
-        bzip2 ${IMGDEPLOYDIR}/vuplus/${UPDATE_DIR}/rootfs.tar; \
+        mv -f ${IMGDEPLOYDIR}/rootfs.tar ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar; \
+        bzip2 ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.tar; \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
         cd ${IMGDEPLOYDIR}; \
-        zip ${IMAGE_NAME}_usb.zip vuplus/${UPDATE_DIR}/*; \
+        zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
         rm -rf vuplus; \
 "
