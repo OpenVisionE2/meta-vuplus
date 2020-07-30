@@ -1,7 +1,7 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	vuplus-dvb-modules-${MACHINE} \
 	gstreamer1.0-libav \
 	kernel-module-rtl8192cu \
