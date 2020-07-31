@@ -56,6 +56,7 @@ IMAGE_CMD_tar_prepend = " \
         cp -f ${IMAGE_ROOTFS}/tmp/zImage ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel_auto.bin; \
         cp -f ${IMAGE_ROOTFS}/boot/initrd_auto.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/initrd_auto.bin; \
 	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/${FORCE_REBOOT_OPTION}.update; \
+	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/mkpart.update; \
         rm -rf ${IMAGE_ROOTFS}/tmp/zImage; \
         rm -rf ${IMAGE_ROOTFS}/boot/initrd_auto.bin; \
         cd ${IMAGE_ROOTFS}; \

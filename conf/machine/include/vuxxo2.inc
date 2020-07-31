@@ -59,7 +59,7 @@ IMAGE_CMD_ubi_prepend = " \
 	rm -rf ${IMAGE_ROOTFS}/boot/initrd_cfe_auto.bin; \
 "
 
-FORCE_REBOOT_OPTION ?= "force"
+FORCE_REBOOT_OPTION ?= "reboot"
 
 IMAGEDIR = "vuplus/${UPDATE_DIR}"
 
