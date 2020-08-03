@@ -10,7 +10,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	vuplus-tuner-turbo \
 "
 
-KERNEL_MODULE_AUTOLOAD += "xfs"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	vuplus-shutdown \
