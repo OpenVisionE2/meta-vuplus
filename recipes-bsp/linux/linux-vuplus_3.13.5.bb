@@ -53,17 +53,12 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
     file://02-10-si2168-Silicon-Labs-Si2168-DVB-T-T2-C-demod-driver.patch \
     file://CONFIG_DVB_SP2.patch \
     file://dvbsky.patch \
+    ${@bb.utils.contains_any("MACHINE", "vuduo2 vusolose", "file://brcm_s3_wol.patch;patch=1;pnum=1", "", d)} \
+    ${@bb.utils.contains("MACHINE", "vusolo2", "file://linux-bcm_ethernet.patch;patch=1;pnum=1", "", d)} \
+    ${@bb.utils.contains("MACHINE", "vuzero", "file://linux_nand_bcm.patc", "", d)} \
     "
 
-SRC_URI_append_vuduo2 += " file://brcm_s3_wol.patch;patch=1;pnum=1"
-
-SRC_URI_append_vusolose += " file://brcm_s3_wol.patch;patch=1;pnum=1 \
-    file://linux_mtd_bbt_maxblock.patch \
-    "
-
-SRC_URI_append_vusolo2 += " file://linux-bcm_ethernet.patch;patch=1;pnum=1"
-
-SRC_URI_append_vuzero += " file://linux_nand_bcm.patch"
+SRC_URI_append_vusolose = " file://linux_mtd_bbt_maxblock.patch"
  
 S = "${WORKDIR}/linux"
 B = "${WORKDIR}/build"

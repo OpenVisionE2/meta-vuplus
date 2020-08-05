@@ -23,7 +23,7 @@ EXTRA_IMAGEDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "bcmwifi", "vuplus-wifi-util-${MACHINE}", "", d)} \
 "
 
-IMAGE_INSTALL_append += "\
+IMAGE_INSTALL_append = " \
 	vuplus-initrd-${MACHINE} \
 	enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE} \
 	vuplus-bluetooth-util-${MACHINE} \
