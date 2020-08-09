@@ -1,7 +1,5 @@
 require vuplus-dvb-proxy.inc
 
-KV = "4.1.20"
-
 SRCDATE = "20190424"
 SRCDATE_PR = "r0"
 

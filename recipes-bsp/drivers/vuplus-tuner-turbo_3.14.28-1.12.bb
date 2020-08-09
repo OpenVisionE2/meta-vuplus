@@ -2,7 +2,8 @@ require vuplus-tuner-turbo.inc
 
 COMPATIBLE_MACHINE = "^(vuuno4k|vuultimo4k)$"
 
-KV = "3.14.28-1.12"
+KV = "${KERNELVERSION}-1.12"
+
 SRCDATE_arm = "20161020"
 
 SRC_URI[driver.md5sum] = "a1ba2928f2be2f70daaeb2112b3bf462"

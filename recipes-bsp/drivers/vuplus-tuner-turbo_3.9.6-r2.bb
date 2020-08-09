@@ -2,7 +2,7 @@ require vuplus-tuner-turbo.inc
 
 COMPATIBLE_MACHINE = "^(vusolo)$"
 
-KV = "3.9.6_R2"
+KV = "${KERNELVERSION}_R2"
 
 SRCDATE = "20150303"
 

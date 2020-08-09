@@ -8,26 +8,26 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	vuplus-tuner-turbo \
-"
+	"
 
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	vuplus-shutdown \
 	gstreamer1.0-plugin-dvbmediasink \
-"
+	"
 
 EXTRA_IMAGEDEPENDS += "\
 	enigma2-plugin-systemplugins-remotecontrolcode \
 	vuplus-tuner-turbo \
 	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE}", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bcmwifi", "vuplus-wifi-util-${MACHINE}", "", d)} \
-"
+	"
 
 IMAGE_INSTALL_append = " \
 	vuplus-initrd-${MACHINE} \
 	enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE} \
 	vuplus-bluetooth-util-${MACHINE} \
-"
+	"
 
 #IMAGE_FSTYPES += "ext4"
 

@@ -4,7 +4,6 @@ LICENSE = "CLOSED"
 
 SRCDATE="20140925_p0"
 
-PV = "1.0"
 PR = "${SRCDATE}_r1"
 SRC_REV = ""
 

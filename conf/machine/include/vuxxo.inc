@@ -1,6 +1,8 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "3.9.6"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	vuplus-dvb-modules-${MACHINE} \
 	gstreamer1.0-libav \
@@ -8,18 +10,17 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	vuplus-tuner-turbo \
-"
-
+	"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
 	vuplus-shutdown \
 	gstreamer1.0-plugin-dvbmediasink \
-"
+	"
 
 EXTRA_IMAGEDEPENDS += "\
 	vuplus-hbbtv-dumpait \
 	vuplus-tuner-turbo \
-"
+	"
 
 MTD_KERNEL = "mtd1"
 MTD_ROOTFS = "mtd0"
@@ -31,7 +32,7 @@ DEFAULTTUNE = "mips32el"
 
 DVBMEDIASINK_CONFIG = "--with-wmv --with-pcm --with-eac3 --with-amr"
 
-PREFERRED_VERSION_linux-vuplus = "3.9.6"
+PREFERRED_VERSION_linux-vuplus = "${KERNELVERSION}"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-vuplus"
 

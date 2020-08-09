@@ -1,6 +1,5 @@
 require vuplus-dvb-modules.inc
 
-KV = "3.13.5"
 SRCDATE = "20190429"
 
 SRC_URI[md5sum] = "966dabe2d410f784b01c69c8160240cb"

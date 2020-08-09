@@ -1,6 +1,7 @@
 SUMMARY = "Linux kernel for ${MACHINE}"
 LICENSE = "GPLv2"
 SECTION = "kernel"
+LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
@@ -8,7 +9,7 @@ inherit kernel machine_kernel_pr samba_change_dialect
 
 COMPATIBLE_MACHINE = "^(vusolo4k|vuultimo4k|vuuno4k)$"
 
-MODULE = "linux-3.14.28"
+MODULE = "linux-${KERNELVERSION}"
 
 KERNELSRC = "stblinux-3.14-1.12.tar.bz2"
 KERNELSRC_vusolo4k = "stblinux-3.14-1.8.tar.bz2"
@@ -19,39 +20,37 @@ SRC_URI[vuuno4k.md5sum] = "2a3a0a7e5cd2a1392f1a26790d1cd8bf"
 SRC_URI[vuuno4k.sha256sum] = "8284670c28a4dad9e94752b38d37a4368f27ce15e671653a3e2ac83915f37db1"
 SRC_URI[vuultimo4k.md5sum] = "2a3a0a7e5cd2a1392f1a26790d1cd8bf"
 SRC_URI[vuultimo4k.sha256sum] = "8284670c28a4dad9e94752b38d37a4368f27ce15e671653a3e2ac83915f37db1"
-LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-SRC_URI += "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHINE} \
-    file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
-    file://bcm_genet_disable_warn.patch \
-    file://linux_dvb-core.patch \
-    file://rt2800usb_fix_warn_tx_status_timeout_to_dbg.patch \
-    file://usb_core_hub_msleep.patch \
-    file://rtl8712_fix_build_error.patch \
-    file://0001-Support-TBS-USB-drivers.patch \
-    file://0001-STV-Add-PLS-support.patch \
-    file://0001-STV-Add-SNR-Signal-report-parameters.patch \
-    file://0001-stv090x-optimized-TS-sync-control.patch \
-    file://blindscan2.patch \
-    file://genksyms_fix_typeof_handling.patch \
-    file://0001-tuners-tda18273-silicon-tuner-driver.patch \
-    file://01-10-si2157-Silicon-Labs-Si2157-silicon-tuner-driver.patch \
-    file://02-10-si2168-Silicon-Labs-Si2168-DVB-T-T2-C-demod-driver.patch \
-    file://0003-cxusb-Geniatech-T230-support.patch \
-    file://CONFIG_DVB_SP2.patch \
-    file://dvbsky.patch \
-    file://rtl2832u-2.patch \
-    file://0004-log2-give-up-on-gcc-constant-optimizations.patch \
-    file://0005-uaccess-dont-mark-register-as-const.patch \
-    file://0006-makefile-disable-warnings.patch \
-    ${@bb.utils.contains_any("MACHINE", "vuuno4k vuultimo4k", "file://linux_prevent_usb_dma_from_bmem.patch", "", d)} \
-    ${@bb.utils.contains("MACHINE", "vusolo4k", "file://linux_rpmb_not_alloc.patch file://fix_mmc_3.14.28-1.10.patch", "", d)} \
-    "
+SRC_URI = "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHINE} \
+	file://defconfig \
+	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
+	file://bcm_genet_disable_warn.patch \
+	file://linux_dvb-core.patch \
+	file://rt2800usb_fix_warn_tx_status_timeout_to_dbg.patch \
+	file://usb_core_hub_msleep.patch \
+	file://rtl8712_fix_build_error.patch \
+	file://0001-Support-TBS-USB-drivers.patch \
+	file://0001-STV-Add-PLS-support.patch \
+	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+	file://0001-stv090x-optimized-TS-sync-control.patch \
+	file://blindscan2.patch \
+	file://genksyms_fix_typeof_handling.patch \
+	file://0001-tuners-tda18273-silicon-tuner-driver.patch \
+	file://01-10-si2157-Silicon-Labs-Si2157-silicon-tuner-driver.patch \
+	file://02-10-si2168-Silicon-Labs-Si2168-DVB-T-T2-C-demod-driver.patch \
+	file://0003-cxusb-Geniatech-T230-support.patch \
+	file://CONFIG_DVB_SP2.patch \
+	file://dvbsky.patch \
+	file://rtl2832u-2.patch \
+	file://0004-log2-give-up-on-gcc-constant-optimizations.patch \
+	file://0005-uaccess-dont-mark-register-as-const.patch \
+	file://0006-makefile-disable-warnings.patch \
+	${@bb.utils.contains_any("MACHINE", "vuuno4k vuultimo4k", "file://linux_prevent_usb_dma_from_bmem.patch", "", d)} \
+	${@bb.utils.contains("MACHINE", "vusolo4k", "file://linux_rpmb_not_alloc.patch file://fix_mmc_${KERNELVERSION}-1.10.patch", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)} \
+	"
 
-SRC_URI_append_vuultimo4k = "file://bcmsysport_3.14.28-1.12.patch"
-
-SRC_URI_append = " ${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "file://linux_dvb_adapter.patch;patch=1;pnum=1", "", d)}"
+SRC_URI_append_vuultimo4k = "file://bcmsysport_${KERNELVERSION}-1.12.patch"
 
 S = "${WORKDIR}/linux"
 B = "${WORKDIR}/build"
