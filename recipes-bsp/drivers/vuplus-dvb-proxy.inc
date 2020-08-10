@@ -2,7 +2,6 @@ DESCRIPTION = "Hardware drivers for VuPlus"
 SECTION = "base"
 LICENSE = "CLOSED"
 
-KV = "${KERNELVERSION}"
 PV = "${KV}"
 PR = "${SRCDATE}.${SRCDATE_PR}"
 

@@ -3,7 +3,6 @@ SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 
-KV = "${KERNELVERSION}"
 PV = "${KV}+${SRCDATE}"
 
 SRC_URI = "http://archive.vuplus.com/download/drivers/vuplus-dvb-modules-${MACHINETYPE}-${KV}-${SRCDATE}.tar.gz"

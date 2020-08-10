@@ -9,7 +9,6 @@ inherit kernel machine_kernel_pr samba_change_dialect
 
 COMPATIBLE_MACHINE = "^(vuduo|vusolo|vuultimo|vuuno)$"
 
-KV = "${KERNELVERSION}"
 
 SRC_URI[md5sum] = "33142378c8387a87190156be1cb1a254"
 SRC_URI[sha256sum] = "47799db9e2658906e532981ec8111a915426b8453762561029733f2406c3e297"
