@@ -52,7 +52,7 @@ SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
 	file://dvbsky.patch \
 	${@bb.utils.contains_any("MACHINE", "vuduo2 vusolose", "file://brcm_s3_wol.patch;patch=1;pnum=1", "", d)} \
 	${@bb.utils.contains("MACHINE", "vusolo2", "file://linux-bcm_ethernet.patch;patch=1;pnum=1", "", d)} \
-	${@bb.utils.contains("MACHINE", "vuzero", "file://linux_nand_bcm.patc", "", d)} \
+	${@bb.utils.contains("MACHINE", "vuzero", "file://linux_nand_bcm.patch", "", d)} \
 	"
 
 SRC_URI_append_vusolose = " file://linux_mtd_bbt_maxblock.patch"
