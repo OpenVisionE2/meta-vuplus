@@ -75,3 +75,5 @@ require conf/machine/include/tune-mips32.inc
 BOX_BRAND = "vuplus"
 
 STB_PLATFORM = "vu1gen"
+
+BLINDSCAN_BINARY = "vuplus_blindscan"

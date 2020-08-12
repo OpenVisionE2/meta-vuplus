@@ -87,3 +87,5 @@ BOX_BRAND = "vuplus"
 STB_PLATFORM = "vu2gen"
 
 EXTRA_ALSA = "vuplus"
+
+BLINDSCAN_BINARY = "vuplus_blindscan"

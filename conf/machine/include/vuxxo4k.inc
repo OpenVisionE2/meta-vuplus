@@ -84,3 +84,5 @@ STB_PLATFORM = "vu4kgen"
 EXTRA_ALSA = "vuplus"
 
 EXTRA_OECONF_append_pn-transtreamproxy = " --enable-ext-pid"
+
+BLINDSCAN_BINARY = "vuplus_blindscan"
