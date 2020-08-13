@@ -30,8 +30,8 @@ do_install() {
 	install -m 0644 ${S}/bthid.ko ${D}${prefix}/local/modules/bthid.ko
 
 	if [ -n "${FIRMWARE_FILE}" ]; then
-		install -d ${D}${base_libdir}/firmware/${FIRMWARE_PATH}
-		install -m 0644 ${S}/${FIRMWARE_FILE} ${D}${base_libdir}/firmware/${FIRMWARE_PATH}
+		install -d ${D}${nonarch_base_libdir}/firmware/${FIRMWARE_PATH}
+		install -m 0644 ${S}/${FIRMWARE_FILE} ${D}${nonarch_base_libdir}/firmware/${FIRMWARE_PATH}
 	fi
 }
 

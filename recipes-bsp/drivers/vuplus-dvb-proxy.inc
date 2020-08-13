@@ -15,9 +15,9 @@ do_configure[depends] += "virtual/kernel:do_shared_workdir"
 KERNEL_VERSION = "${@oe.utils.read_file('${STAGING_KERNEL_BUILDDIR}/kernel-abiversion')}"
 
 do_install() {
-        install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra
+        install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
         for f in *.ko; do
-                install -m 0644 ${WORKDIR}/$f ${D}${base_libdir}/modules/${KERNEL_VERSION}/extra/$f;
+                install -m 0644 ${WORKDIR}/$f ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra/$f;
         done
 }
 

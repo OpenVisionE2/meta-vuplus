@@ -17,9 +17,9 @@ SRC_URI += "\
 "
 
 do_install() {
-	install -d ${D}${base_libdir}/modules/${KV}/extra
+	install -d ${D}${nonarch_base_libdir}/modules/${KV}/extra
 	for f in *.ko; do
-		install -m 0644 ${WORKDIR}/$f ${D}${base_libdir}/modules/${KV}/extra/$f;
+		install -m 0644 ${WORKDIR}/$f ${D}${nonarch_base_libdir}/modules/${KV}/extra/$f;
 	done
 	if [ -f ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ]; then
 		install -d ${D}${INIT_D_DIR}

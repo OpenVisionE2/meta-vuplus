@@ -35,10 +35,10 @@ S = "${WORKDIR}"
 inherit module-base
 
 do_install() {
-    install -d ${D}${base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus
-    install -m 0644 ${S}/vuplus_tuner_turbo_driver.ko ${D}${base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus/vuplus_tuner_turbo_driver.ko
-    install -d ${D}${base_libdir}/firmware/
-    install -m 0644 ${S}/Vuplus_Turbo_USB_0101.fw ${D}${base_libdir}/firmware/Vuplus_Turbo_USB_0101.fw
+    install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus
+    install -m 0644 ${S}/vuplus_tuner_turbo_driver.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus/vuplus_tuner_turbo_driver.ko
+    install -d ${D}${nonarch_base_libdir}/firmware/
+    install -m 0644 ${S}/Vuplus_Turbo_USB_0101.fw ${D}${nonarch_base_libdir}/firmware/Vuplus_Turbo_USB_0101.fw
     install -d "${D}${bindir}"
     install -m 0755 "${S}/vuplus_turbo_c" "${D}${bindir}"
     install -m 0755 "${S}/vuplus_turbo_t" "${D}${bindir}"

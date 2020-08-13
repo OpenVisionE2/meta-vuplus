@@ -29,8 +29,8 @@ do_install() {
 	install -d ${D}${prefix}/local/modules
 	install -m 0644 ${S}/dhd.ko ${D}${prefix}/local/modules/dhd.ko
 
-	install -d ${D}${base_libdir}/firmware/bcm43569/
-	install -m 0644 ${S}/bcm43569-firmware.bin ${D}${base_libdir}/firmware/bcm43569/
-	install -m 0644 ${S}/bcm43569_iton.nvm ${D}${base_libdir}/firmware/bcm43569/
+	install -d ${D}${nonarch_base_libdir}/firmware/bcm43569/
+	install -m 0644 ${S}/bcm43569-firmware.bin ${D}${nonarch_base_libdir}/firmware/bcm43569/
+	install -m 0644 ${S}/bcm43569_iton.nvm ${D}${nonarch_base_libdir}/firmware/bcm43569/
 }
 
