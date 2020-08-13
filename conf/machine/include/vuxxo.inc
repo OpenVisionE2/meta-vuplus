@@ -77,3 +77,5 @@ BOX_BRAND = "vuplus"
 STB_PLATFORM = "vu1gen"
 
 BLINDSCAN_BINARY = "vuplus_blindscan"
+
+RCNAME ?= "vu"

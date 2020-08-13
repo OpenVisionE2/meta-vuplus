@@ -89,3 +89,5 @@ STB_PLATFORM = "vu2gen"
 EXTRA_ALSA = "vuplus"
 
 BLINDSCAN_BINARY = "vuplus_blindscan"
+
+RCNAME ?= "vu"
