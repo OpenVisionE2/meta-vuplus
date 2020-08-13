@@ -33,9 +33,9 @@ PLUGABLE_MODEL_BLINDSCAN = " \
 "
 
 do_install() {
-	install -d "${D}/${bindir}"
+	install -d "${D}${bindir}"
 	for f in ${PLUGABLE_MODEL_BLINDSCAN}; do
-		install -m 0755 "${S}/$f" "${D}/${bindir}"
+		install -m 0755 "${S}/$f" "${D}${bindir}"
 	done
 }
 

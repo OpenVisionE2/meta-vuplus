@@ -32,8 +32,8 @@ PLUGABLE_MODEL_BLINDSCAN = " \
 "
 
 do_install() {
-	install -d "${D}/${bindir}"
-	install -m 0755 "${S}/tda1002x" "${D}/${bindir}"
+	install -d "${D}${bindir}"
+	install -m 0755 "${S}/tda1002x" "${D}${bindir}"
 }
 
 FILES_vuplus-blindscan-dvbs-utils-${MACHINE} = "\

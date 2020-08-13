@@ -26,11 +26,11 @@ do_install() {
 	install -m 0755 ${S}/wl-config.sh ${D}${bindir}
 	install -m 0755 ${S}/wl-down.sh ${D}${bindir}
 
-	install -d ${D}/usr/local/modules
-	install -m 0644 ${S}/dhd.ko ${D}/usr/local/modules/dhd.ko
+	install -d ${D}${prefix}/local/modules
+	install -m 0644 ${S}/dhd.ko ${D}${prefix}/local/modules/dhd.ko
 
-	install -d ${D}/lib/firmware/bcm43569/
-	install -m 0644 ${S}/bcm43569-firmware.bin ${D}/lib/firmware/bcm43569/
-	install -m 0644 ${S}/bcm43569_iton.nvm ${D}/lib/firmware/bcm43569/
+	install -d ${D}${base_libdir}/firmware/bcm43569/
+	install -m 0644 ${S}/bcm43569-firmware.bin ${D}${base_libdir}/firmware/bcm43569/
+	install -m 0644 ${S}/bcm43569_iton.nvm ${D}${base_libdir}/firmware/bcm43569/
 }
 

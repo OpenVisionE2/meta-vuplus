@@ -25,13 +25,13 @@ do_install() {
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/bsa_server ${D}${bindir}
 
-	install -d ${D}/usr/local/modules
-	install -m 0644 ${S}/btusb.ko ${D}/usr/local/modules/btusb.ko
-	install -m 0644 ${S}/bthid.ko ${D}/usr/local/modules/bthid.ko
+	install -d ${D}${prefix}/local/modules
+	install -m 0644 ${S}/btusb.ko ${D}${prefix}/local/modules/btusb.ko
+	install -m 0644 ${S}/bthid.ko ${D}${prefix}/local/modules/bthid.ko
 
 	if [ -n "${FIRMWARE_FILE}" ]; then
-		install -d ${D}/lib/firmware/${FIRMWARE_PATH}
-		install -m 0644 ${S}/${FIRMWARE_FILE} ${D}/lib/firmware/${FIRMWARE_PATH}
+		install -d ${D}${base_libdir}/firmware/${FIRMWARE_PATH}
+		install -m 0644 ${S}/${FIRMWARE_FILE} ${D}${base_libdir}/firmware/${FIRMWARE_PATH}
 	fi
 }
 

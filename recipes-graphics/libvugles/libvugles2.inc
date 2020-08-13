@@ -16,9 +16,9 @@ do_install() {
 	install -d ${D}${includedir}
 	cp -r ${S}/include/* ${D}${includedir}/
 	install -d ${D}${libdir}
-	cp -r ${S}/lib/*.so ${D}${libdir}/
+	cp -r ${S}${base_libdir}/*.so ${D}${libdir}/
 	install -d ${D}${libdir}/pkgconfig
-	cp -r ${S}/lib/pkgconfig/*.pc ${D}${libdir}/pkgconfig/
+	cp -r ${S}${base_libdir}/pkgconfig/*.pc ${D}${libdir}/pkgconfig/
 }
 
 PACKAGES = "${PN}"

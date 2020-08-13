@@ -30,7 +30,7 @@ do_install_prepend() {
 
 do_install() {
 	install -d ${D}${libdir}
-	install -m 0755 ${S}/lib/*.so ${D}${libdir}
+	install -m 0755 ${S}${base_libdir}/*.so ${D}${libdir}
 	ln -s libv3ddriver.so ${D}${libdir}/libEGL.so
 	ln -s libv3ddriver.so ${D}${libdir}/libGLESv2.so
 
