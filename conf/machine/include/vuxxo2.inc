@@ -10,9 +10,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	vuplus-tuner-turbo \
-	"
-
-MACHINE_EXTRA_RRECOMMENDS += "\
 	vuplus-shutdown \
 	gstreamer1.0-plugin-dvbmediasink \
 	"
