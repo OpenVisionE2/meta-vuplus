@@ -3,7 +3,7 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = "file://update_systemconfig_arm;md5=39018f970452e01743a00a4ff642c099"
 
-COMPATIBLE_MACHINE = "^(vuuno4kse|vuultimo4k|vuduo4k)$"
+COMPATIBLE_MACHINE = "^(vuuno4kse|vuultimo4k|vuduo4k|vuduo4kse)$"
 
 
 SRC_URI = " \

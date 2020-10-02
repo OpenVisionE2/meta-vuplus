@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr samba_change_dialect
 
-COMPATIBLE_MACHINE = "^(vuduo4k)$"
+COMPATIBLE_MACHINE = "^(vuduo4k|vuduo4kse)$"
 
 MODULE = "linux-${KERNELVERSION}"
 
