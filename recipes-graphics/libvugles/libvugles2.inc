@@ -6,6 +6,8 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PR = "${SRCDATE}.${SRCDATE_PR}"
 
+SRC_URI = "http://archive.vuplus.com/download/build_support/vuplus/libvugles2-0.1.1-${MACHINE}-${PR}.tar.gz"
+
 INHIBIT_PACKAGE_STRIP = "1"
 
 S = "${WORKDIR}/libvugles2-0.1.1"
@@ -24,9 +26,3 @@ do_install() {
 PACKAGES = "${PN}"
 
 FILES_${PN} = "${incdir} ${libdir}"
-
-do_license() {
-	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
-}
-
-addtask do_license before do_populate_lic after do_unpack
