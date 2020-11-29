@@ -52,7 +52,7 @@ IMAGE_CMD_tar_prepend = " \
         cp -f ${IMAGE_ROOTFS}/boot/initrd_auto.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/initrd_auto.bin; \
 	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/${FORCE_REBOOT_OPTION}.update; \
 	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/mkpart.update; \
-        rm -rf ${IMAGE_ROOTFS}/tmp/zImage; \
+	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
         rm -rf ${IMAGE_ROOTFS}/boot/initrd_auto.bin; \
         cd ${IMAGE_ROOTFS}; \
         tar -cvf ${IMGDEPLOYDIR}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
@@ -63,7 +63,7 @@ IMAGE_CMD_tar_prepend = " \
         zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.tar.bz2; \
         rm -rf vuplus; \
-"
+	"
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci dvbproxy blindscan-tbs vuplus emmc mmc dvb-c blindscan-dvbc blindscan-dvbs ctrlrc bluetooth HDMI"
 

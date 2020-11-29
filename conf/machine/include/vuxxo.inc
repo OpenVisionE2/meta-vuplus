@@ -46,7 +46,7 @@ EXTRA_IMAGECMD_COMPAT = " --eraseblock=0x20000 -n -l "
 IMAGE_CMD_ubi_prepend = " \
 	rm -rf ${IMAGE_ROOTFS}/boot/*; \
 	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
-"
+	"
 
 FORCE_REBOOT_OPTION ?= "reboot"
 
@@ -63,7 +63,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -rf vuplus; \
-"
+	"
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec ci blindscan-tbs vuplus HDMI SCART"
 

@@ -51,9 +51,9 @@ EXTRA_IMAGECMD_COMPAT = " --eraseblock=0x20000 -n -l "
 IMAGE_CMD_ubi_prepend = " \
 	cp -f ${IMAGE_ROOTFS}/tmp/vmlinux.gz ${IMGDEPLOYDIR}/${IMAGE_NAME}.vmlinux.gz; \
 	cp -f ${IMAGE_ROOTFS}/boot/initrd_cfe_auto.bin ${IMGDEPLOYDIR}/${IMAGE_NAME}.initrd_cfe_auto.bin; \
-	rm -rf ${IMAGE_ROOTFS}/tmp/vmlinux.gz; \
+	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
 	rm -rf ${IMAGE_ROOTFS}/boot/initrd_cfe_auto.bin; \
-"
+	"
 
 FORCE_REBOOT_OPTION ?= "reboot"
 
@@ -71,7 +71,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
 	rm -rf vuplus; \
-"
+	"
 
 MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec fan blindscan-tbs vuplus HDMI"
 
