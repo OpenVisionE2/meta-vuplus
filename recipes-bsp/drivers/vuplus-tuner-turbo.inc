@@ -35,13 +35,13 @@ S = "${WORKDIR}"
 inherit module-base
 
 do_install() {
-    install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus
-    install -m 0644 ${S}/vuplus_tuner_turbo_driver.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus/vuplus_tuner_turbo_driver.ko
-    install -d ${D}${nonarch_base_libdir}/firmware/
-    install -m 0644 ${S}/Vuplus_Turbo_USB_0101.fw ${D}${nonarch_base_libdir}/firmware/Vuplus_Turbo_USB_0101.fw
-    install -d "${D}${bindir}"
-    install -m 0755 "${S}/vuplus_turbo_c" "${D}${bindir}"
-    install -m 0755 "${S}/vuplus_turbo_t" "${D}${bindir}"
+	install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus
+	install -m 0644 ${S}/vuplus_tuner_turbo_driver.ko ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/media/usb/vuplus/vuplus_tuner_turbo_driver.ko
+	install -d ${D}${nonarch_base_libdir}/firmware/
+	install -m 0644 ${S}/Vuplus_Turbo_USB_0101.fw ${D}${nonarch_base_libdir}/firmware/Vuplus_Turbo_USB_0101.fw
+	install -d "${D}${bindir}"
+	install -m 0755 "${S}/vuplus_turbo_c" "${D}${bindir}"
+	install -m 0755 "${S}/vuplus_turbo_t" "${D}${bindir}"
 }
 
 pkg_postinst_${PN} () {
@@ -51,7 +51,8 @@ pkg_postinst_${PN} () {
     true
 }
 
-PACKAGE_ARCH := "${MACHINE_ARCH}"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 FILES_${PN} = "/"
 
 SRC_URI[binfw.md5sum] = "517a9d54e41fae16612bcfe431ef7a3e"
