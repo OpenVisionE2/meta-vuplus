@@ -38,9 +38,6 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-vuplus"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "vuplus-blindscan-utils-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "vuplus-blindscan-utils-${MACHINE}"
 
-PREFERRED_PROVIDER_virtual/egl = "libgles-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgles2 = "libgles-${MACHINE}"
-
 IMAGE_FSTYPES ?= "ubi"
 
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c ${MKFS_UBI_MAX_ERASE_BLK_COUNT}"
