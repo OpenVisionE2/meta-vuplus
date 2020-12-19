@@ -16,7 +16,7 @@ S = "${WORKDIR}"
 do_install() {
     install -d ${D}${sysconfdir}/init.d/
     install -d ${D}${bindir}
-    install -m 0755 ${WORKDIR}/update_systemconfig_arm ${D}${bindir}/update_systemconfig
+    install -m 0755 ${WORKDIR}/update_systemconfig_arm -f ${D}${bindir}/update_systemconfig
     install -m 0755 ${WORKDIR}/update_systemconfig.sh ${D}${sysconfdir}/init.d/
 }
 

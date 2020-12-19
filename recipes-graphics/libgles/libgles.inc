@@ -17,10 +17,10 @@ SRC_URI += "git://github.com/KhronosGroup/OpenGL-Registry;name=openglh;subpath=a
 SRCREV_openglh = "8261133c2645aaeef880c5f5a6e327f399bc9d04"
 
 do_install_prepend() {
-	cp -a ${S}/egl/EGL/* ${S}/include/EGL/
-	cp -a ${S}/egl/KHR/* ${S}/include/KHR/
-	cp -a ${S}/opengl/GLES/*.h ${S}/include/GLES/
-	cp -a ${S}/opengl/GLES2/* ${S}/include/GLES2/
+	cp -fa ${S}/egl/EGL/* ${S}/include/EGL/
+	cp -fa ${S}/egl/KHR/* ${S}/include/KHR/
+	cp -fa ${S}/opengl/GLES/*.h ${S}/include/GLES/
+	cp -fa ${S}/opengl/GLES2/* ${S}/include/GLES2/
 }
 
 do_install() {
@@ -30,7 +30,7 @@ do_install() {
 	ln -s libv3ddriver.so ${D}${libdir}/libGLESv2.so
 
 	install -d ${D}${includedir}
-	cp -a ${S}/include/* ${D}${includedir}/
+	cp -fa ${S}/include/* ${D}${includedir}/
 }
 
 do_package_qa[noexec] = "1"
