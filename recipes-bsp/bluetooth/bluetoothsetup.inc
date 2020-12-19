@@ -19,7 +19,7 @@ BLUETOOTH_PLUGIN_PATH = "${libdir}/enigma2/python/Plugins/SystemPlugins/Bluetoot
 
 do_install() {
 	install -d  ${D}${BLUETOOTH_PLUGIN_PATH}
-	cp -r --preserve=mode,links ${S}/* ${D}${BLUETOOTH_PLUGIN_PATH}
+	cp -fr --preserve=mode,links ${S}/* ${D}${BLUETOOTH_PLUGIN_PATH}
 }
 
 FILES_${PN} = "${BLUETOOTH_PLUGIN_PATH}"
