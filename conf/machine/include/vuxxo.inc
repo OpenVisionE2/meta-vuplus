@@ -57,6 +57,8 @@ IMAGE_CMD_ubi_append = " \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/root_cfe_auto.jffs2; \
 	gzip -f -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel_cfe_auto.bin; \
 	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/${FORCE_REBOOT_OPTION}.update; \
+	echo ${IMAGE_NAME} > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/${IMAGEDIR}/donate.txt; \
 	rm -f ${IMGDEPLOYDIR}/*.zip; \
 	cd ${IMGDEPLOYDIR}; \
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \

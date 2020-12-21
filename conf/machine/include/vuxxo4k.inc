@@ -52,6 +52,8 @@ IMAGE_CMD_tar_prepend = " \
         cp -f ${IMAGE_ROOTFS}/boot/initrd_auto.bin ${IMGDEPLOYDIR}/${IMAGEDIR}/initrd_auto.bin; \
 	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/${FORCE_REBOOT_OPTION}.update; \
 	touch ${IMGDEPLOYDIR}/${IMAGEDIR}/mkpart.update; \
+	echo ${IMAGE_NAME} > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
+	echo "https://forum.openvision.tech/app.php/donate" > ${IMGDEPLOYDIR}/${IMAGEDIR}/donate.txt; \
         rm -f ${IMAGE_ROOTFS}/boot/initrd_auto.bin; \
         cd ${IMAGE_ROOTFS}; \
 	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
