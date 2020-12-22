@@ -71,7 +71,7 @@ FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.g
 
 do_configure_prepend() {
     if [ -e ${WORKDIR}/defconfig_proxy ]; then
-        mv ${WORKDIR}/defconfig_proxy ${WORKDIR}/defconfig
+        mv -f ${WORKDIR}/defconfig_proxy ${WORKDIR}/defconfig
     fi
     if ${@bb.utils.contains("MACHINE_FEATURES", 'dvbproxy', 'true', 'false', d)}; then
         sed -i "s/bmem=220M@512M/bmem=384M@512M/g" ${WORKDIR}/defconfig
