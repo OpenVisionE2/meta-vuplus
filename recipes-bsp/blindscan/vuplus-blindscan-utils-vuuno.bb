@@ -6,3 +6,5 @@ do_install() {
                 install -m 0755 "${S}/$f" "${D}${bindir}"
         done
 }
+
+COMPATIBLE_MACHINE = "^(vuuno)$"

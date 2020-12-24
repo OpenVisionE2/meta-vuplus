@@ -17,3 +17,5 @@ FILES_vuplus-blindscan-dvbc-utils-${MACHINE} = "\
 "
 
 BLINDSCAN_BINARY = "vuplus_si2166_blindscan"
+
+COMPATIBLE_MACHINE = "^(vuzero4k)$"

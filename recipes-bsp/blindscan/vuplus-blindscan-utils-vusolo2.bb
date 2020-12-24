@@ -7,3 +7,5 @@ do_install() {
 }
 
 BLINDSCAN_BINARY = "vuplus_bcm7346_blindscan"
+
+COMPATIBLE_MACHINE = "^(vusolo2)$"
