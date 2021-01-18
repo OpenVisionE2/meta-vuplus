@@ -5,13 +5,11 @@ KERNELVERSION = "3.9.6"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	vuplus-dvb-modules-${MACHINE} \
-	gstreamer1.0-libav \
 	kernel-module-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	vuplus-tuner-turbo \
 	vuplus-shutdown \
-	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 EXTRA_IMAGEDEPENDS += "\
