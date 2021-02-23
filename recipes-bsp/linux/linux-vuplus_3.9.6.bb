@@ -13,7 +13,7 @@ COMPATIBLE_MACHINE = "^(vuduo|vusolo|vuultimo|vuuno)$"
 SRC_URI[md5sum] = "33142378c8387a87190156be1cb1a254"
 SRC_URI[sha256sum] = "47799db9e2658906e532981ec8111a915426b8453762561029733f2406c3e297"
 
-SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KV}.tar.bz2 \
+SRC_URI = "http://code.vuplus.com/download/release/kernel/stblinux-${KV}.tar.bz2 \
 	file://defconfig \
 	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
 	file://add-dmx-source-timecode.patch \

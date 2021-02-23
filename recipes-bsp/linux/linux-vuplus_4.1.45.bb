@@ -16,7 +16,7 @@ KSRC_VER = "4.1-1.17"
 SRC_URI[md5sum] = "7b5617dc7ec01ff4347b5b50d9d46f0f"
 SRC_URI[sha256sum] = "18ecc79522f6b975c96cca7975eb31db93d2e8cfea6755451bba0a1a28feb0bd"
 
-SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-${KSRC_VER}.tar.bz2 \
+SRC_URI = "http://code.vuplus.com/download/release/kernel/stblinux-${KSRC_VER}.tar.bz2 \
 	file://defconfig \
 	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
 	file://linux_dvb_adapter.patch \

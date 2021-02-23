@@ -16,7 +16,7 @@ KERNEL_SRC_VERSION = "1.9"
 SRC_URI[md5sum] = "9403441e47266f37ce8d9e2cdf34159d"
 SRC_URI[sha256sum] = "5f5a43e222716962336df55eb98bd96001de2caf7b7dce538e266f5ba6851af6"
 
-SRC_URI = "http://archive.vuplus.com/download/kernel/stblinux-4.1-${KERNEL_SRC_VERSION}.tar.bz2 \
+SRC_URI = "http://code.vuplus.com/download/release/kernel/stblinux-4.1-${KERNEL_SRC_VERSION}.tar.bz2 \
 	file://defconfig \
 	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
 	file://linux_dvb-core.patch \

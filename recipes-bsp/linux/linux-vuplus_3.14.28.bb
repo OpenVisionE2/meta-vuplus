@@ -21,7 +21,7 @@ SRC_URI[vuuno4k.sha256sum] = "8284670c28a4dad9e94752b38d37a4368f27ce15e671653a3e
 SRC_URI[vuultimo4k.md5sum] = "2a3a0a7e5cd2a1392f1a26790d1cd8bf"
 SRC_URI[vuultimo4k.sha256sum] = "8284670c28a4dad9e94752b38d37a4368f27ce15e671653a3e2ac83915f37db1"
 
-SRC_URI = "http://archive.vuplus.com/download/kernel/${KERNELSRC};name=${MACHINE} \
+SRC_URI = "http://code.vuplus.com/download/release/kernel/${KERNELSRC};name=${MACHINE} \
 	file://defconfig \
 	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
 	file://bcm_genet_disable_warn.patch \

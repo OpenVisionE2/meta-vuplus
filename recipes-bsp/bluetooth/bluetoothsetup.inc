@@ -10,7 +10,7 @@ RDEPENDS_${PN} = "vuplus-bluetooth-util-${MACHINE} libusb-compat"
 PR = "${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = " \
-    http://archive.vuplus.com/download/build_support/vuplus/enigma2-plugin-bluetoothsetup-${MACHINE}-${PR}.tar.gz \
+    http://code.vuplus.com/download/release/bt/enigma2-plugin-bluetoothsetup-${MACHINE}-${PR}.tar.gz \
 "
 
 S = "${WORKDIR}/plugin"
