@@ -14,8 +14,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	"
 
 EXTRA_IMAGEDEPENDS += "\
-	enigma2-plugin-systemplugins-firmwareupgrade \
-	enigma2-plugin-systemplugins-remotecontrolcode \
 	vuplus-hbbtv-dumpait \
 	vuplus-tuner-turbo \
 	vuplus-tuner-turbo2 \

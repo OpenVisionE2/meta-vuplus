@@ -6,22 +6,20 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
+	${@bb.utils.contains_any("MACHINE", "vuuno4kse vuultimo4k vuduo4k vuduo4kse", "vuplus-hdmi-in-helper", "", d)} \
 	vuplus-tuner-turbo \
 	vuplus-tuner-turbo2 \
 	vuplus-shutdown \
 	"
 
 EXTRA_IMAGEDEPENDS += "\
-	enigma2-plugin-systemplugins-remotecontrolcode \
 	vuplus-tuner-turbo \
 	vuplus-tuner-turbo2 \
-	${@bb.utils.contains("MACHINE_FEATURES", "bluetooth", "enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE}", "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "bcmwifi", "vuplus-wifi-util-${MACHINE}", "", d)} \
 	"
 
 IMAGE_INSTALL_append = " \
 	vuplus-initrd-${MACHINE} \
-	enigma2-plugin-systemplugins-bluetoothsetup-${MACHINE} \
 	vuplus-bluetooth-util-${MACHINE} \
 	"
 
