@@ -1,5 +1,9 @@
+SUMMARY = "Platform Util drivers for ${MACHINE}"
 SECTION = "base"
+PRIORITY = "required"
 LICENSE = "CLOSED"
+
+RDEPENDS_${PN} += "gptfdisk"
 
 PV = "15.1"
 PR = "${SRCDATE}.${SRCDATE_PR}"
@@ -14,10 +18,8 @@ S = "${WORKDIR}/platform-util-${MACHINE}"
 do_install() {
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/* ${D}${bindir}
-	if [ -f ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ]; then
-		install -d ${D}${INIT_D_DIR}
-		install -m 0755 ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ${D}${INIT_D_DIR}/${INITSCRIPT_NAME}
-	fi
+	install -d ${D}${INIT_D_DIR}
+	install -m 0755 ${WORKDIR}/${INITSCRIPT_NAME}.sysvinit ${D}${INIT_D_DIR}/${INITSCRIPT_NAME}
 }
 
 do_package_qa[noexec] = "1"

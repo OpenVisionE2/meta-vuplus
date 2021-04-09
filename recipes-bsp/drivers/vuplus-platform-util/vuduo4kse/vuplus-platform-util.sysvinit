@@ -1,16 +1,26 @@
 #!/bin/sh
+### BEGIN INIT INFO
+# Provides:          platform-util
+# Required-Start:    kmod bootmisc
+# Required-Stop:
+# Should-Start:      checkroot
+# Should-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Load the Broadcam platform-util.
+# Description:       Load the Broadcam platform-util.
+### END INIT INFO
 
 if [ -e /sys/class/net/sys0 ]; then
   ifconfig sys0 up
 fi
-
 case "$1" in
   start)
     # first boot?
     [ -f /etc/dropbear/dropbear_rsa_host_key ]
     echo -n "Starting  vuplus-platform-util"
     if [ ! -e /dev/brcm0 ]; then
-        DRV_PATH=/lib/modules/`uname -r`/extra
+        DRV_PATH=/lib/modules/4.1.45-1.17/extra
         insmod $DRV_PATH/procmk.ko
         insmod $DRV_PATH/bcm_event.ko
         insmod $DRV_PATH/dvb_base.ko
@@ -19,8 +29,8 @@ case "$1" in
 
         mknod -m a=rw /dev/brcm0 c 30 0
 
-        start-stop-daemon --start --quiet --exec /usr/bin/init_client $DRV_PATH/dvb-bcm.ko $DRV_PATH/brcmfb.ko -- &
-    fi
+        start-stop-daemon --start --quiet --exec /usr/bin/init_client $DRV_PATH/dvb-bcm7444.ko $DRV_PATH/brcmfb.ko -- &
+    fi 
 
     while [ ! -c /dev/fb0 ]; do
         usleep 100000

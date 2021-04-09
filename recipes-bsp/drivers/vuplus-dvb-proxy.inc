@@ -1,31 +1,28 @@
-DESCRIPTION = "Hardware drivers for VuPlus"
+DESCRIPTION = "Hardware drivers for ${MACHINE}"
 SECTION = "base"
+PRIORITY = "required"
 LICENSE = "CLOSED"
 
-PV = "${KV}"
+PV ?= "${KV}"
 PR = "${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = "http://code.vuplus.com/download/release/vuplus-dvb-proxy/vuplus-dvb-proxy-${MACHINE}-${PV}-${PR}.tar.gz "
 
 S = "${WORKDIR}"
 
-#inherit module-base
-DEPENDS = "virtual/kernel"
-do_configure[depends] += "virtual/kernel:do_shared_workdir"
-KERNEL_VERSION = "${@oe.utils.read_file('${STAGING_KERNEL_BUILDDIR}/kernel-abiversion')}"
+INHIBIT_PACKAGE_STRIP = "1"
 
-do_install() {
-        install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra
-        for f in *.ko; do
-                install -m 0644 ${WORKDIR}/$f ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/extra/$f;
-        done
+do_compile() {
 }
 
-pkg_postinst_${PN} () {
-        if [ -d /proc/stb ]; then
-                depmod -a
-        fi
-        true
+do_populate_sysroot() {
+}
+
+do_install() {
+        install -d ${D}${nonarch_base_libdir}/modules/${KV}/extra
+        for f in *.ko; do
+                install -m 0644 ${WORKDIR}/$f ${D}${nonarch_base_libdir}/modules/${KV}/extra/$f;
+        done
 }
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
