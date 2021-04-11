@@ -13,10 +13,10 @@ SRC_URI = "\
 S = "${WORKDIR}"
 
 do_install() {
-	install -d ${D}${INIT_D_DIR}/
+	install -d ${D}${sysconfdir}/init.d/
 	install -d ${D}${bindir}
 	install -m 0755 ${WORKDIR}/update_systemconfig_arm ${D}${bindir}/update_systemconfig
-	install -m 0755 ${WORKDIR}/update_systemconfig.sh ${D}${INIT_D_DIR}/
+	install -m 0755 ${WORKDIR}/update_systemconfig.sh ${D}${sysconfdir}/init.d/
 }
 
 inherit update-rc.d

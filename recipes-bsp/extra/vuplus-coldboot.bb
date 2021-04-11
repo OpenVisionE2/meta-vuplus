@@ -10,12 +10,12 @@ SRC_REV = ""
 SRC_URI = "http://code.vuplus.com/download/release/openpli-support/vuplus-coldboot_${SRCDATE}.tar.gz"
 
 do_install() {
-	install -d ${D}${INIT_D_DIR} \
+	install -d ${D}${sysconfdir}/init.d \
 		${D}${bindir} \
         	${D}${sysconfdir}/rc0.d 
 
-	install -m 0755 ${WORKDIR}/${PN}/coldboot.sh ${D}${INIT_D_DIR}/coldboot.sh
-	install -m 0755 ${WORKDIR}/${PN}/ethwol.sh ${D}${INIT_D_DIR}/ethwol.sh
+	install -m 0755 ${WORKDIR}/${PN}/coldboot.sh ${D}${sysconfdir}/init.d/coldboot.sh
+	install -m 0755 ${WORKDIR}/${PN}/ethwol.sh ${D}${sysconfdir}/init.d/ethwol.sh
 	install -m 0755 ${WORKDIR}/${PN}/coldboot ${D}${bindir}/coldboot
         ln -sf   ../init.d/coldboot.sh ${D}${sysconfdir}/rc0.d/S30coldboot.sh
 	ln -sf   ../init.d/ethwol.sh ${D}${sysconfdir}/rc0.d/K32ethwol.sh
