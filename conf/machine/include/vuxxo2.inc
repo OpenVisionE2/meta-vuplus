@@ -8,7 +8,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
-	vuplus-tuner-turbo kernel-module-dvb-usb kernel-module-dvb-usb-v2 kernel-module-cypress-firmware kernel-module-dvb-usb-cypress-firmware \
+	vuplus-tuner-turbo \
 	vuplus-tuner-turbo2 \
 	vuplus-shutdown \
 	"

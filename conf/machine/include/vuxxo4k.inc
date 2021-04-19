@@ -7,7 +7,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	${@bb.utils.contains_any("MACHINE", "vuuno4kse vuultimo4k vuduo4k vuduo4kse", "vuplus-hdmi-in-helper", "", d)} \
-	vuplus-tuner-turbo kernel-module-dvb-usb kernel-module-dvb-usb-v2 kernel-module-cypress-firmware kernel-module-dvb-usb-cypress-firmware \
+	vuplus-tuner-turbo \
 	vuplus-tuner-turbo2 \
 	vuplus-shutdown \
 	"
