@@ -5,9 +5,9 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-PR = "${SRCDATE}.${SRCDATE_PR}"
+PV = "0.1.1"
 
-require libvugles2-${TARGET_ARCH}.inc
+PR = "${SRCDATE}.${SRCDATE_PR}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 
