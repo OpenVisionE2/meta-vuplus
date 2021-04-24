@@ -3,8 +3,8 @@ LICENSE = "CLOSED"
 
 PROVIDES = "virtual/libgles2 virtual/egl"
 
-PV="15.1"
-PR="${SRCDATE}.${SRCDATE_PR}"
+PV = "15.1"
+PR = "${SRCDATE}.${SRCDATE_PR}"
 
 SRC_URI = "http://code.vuplus.com/download/release/libgles/libgles-${MACHINE}-${PV}-${PR}.tar.gz"
 
@@ -37,7 +37,7 @@ do_package_qa[noexec] = "1"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 FILES_SOLIBSDEV = ""
-FILES_${PN}="${libdir}"
+FILES_${PN} = "${libdir}"
 
 RPROVIDES_${PN} = "libEGL.so libGLESv2.so libdvb_base.so libdvb_client.so libnxpl.so libv3ddriver.so"
 

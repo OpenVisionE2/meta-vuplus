@@ -1,0 +1,8 @@
+SRCDATE = "20181109"
+
+COMPATIBLE_MACHINE = "^(vuduo4k)$"
+
+SRC_URI[md5sum] = "9d7a1a27b6243835a70410584c3874a0"
+SRC_URI[sha256sum] = "e86eb7bc9182607f87354ad08d8e23b722c39247335f27d9f5367bd6a877b1ee"
+
+require libvupl.inc
