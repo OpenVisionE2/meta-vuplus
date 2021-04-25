@@ -11,7 +11,7 @@ PR = "${SRCDATE}.${SRCDATE_PR}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-S = "${WORKDIR}/${PN}-${PV}"
+S = "${WORKDIR}/libvugles2-${PV}"
 
 inherit pkgconfig
 
