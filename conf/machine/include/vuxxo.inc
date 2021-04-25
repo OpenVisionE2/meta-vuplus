@@ -5,7 +5,7 @@ KERNELVERSION = "3.9.6"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	vuplus-dvb-modules-${MACHINE} \
-	kernel-module-rtl8192cu \
+	kernel-module-extrawlan-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	vuplus-tuner-turbo \

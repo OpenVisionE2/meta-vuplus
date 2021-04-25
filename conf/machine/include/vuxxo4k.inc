@@ -3,7 +3,7 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "dvbproxy", "vuplus-dvb-proxy-${MACHINE} libgles-${MACHINE} libvupl-${MACHINE} libvugles2-${MACHINE} vuplus-platform-util-${MACHINE}", "vuplus-dvb-modules-${MACHINE}", d)} \
-	kernel-module-rtl8192cu \
+	kernel-module-extrawlan-rtl8192cu \
 	firmware-rtl8192cu \
 	firmware-rtl8192cufw \
 	${@bb.utils.contains_any("MACHINE", "vuuno4kse vuultimo4k vuduo4k vuduo4kse", "vuplus-hdmi-in-helper", "", d)} \
