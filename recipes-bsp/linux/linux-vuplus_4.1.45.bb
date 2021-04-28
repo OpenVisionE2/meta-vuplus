@@ -48,6 +48,8 @@ SRC_URI = "http://code.vuplus.com/download/release/kernel/stblinux-${KSRC_VER}.t
 	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
 	file://blindscan2.patch \
 	file://0001-stv090x-optimized-TS-sync-control.patch \
+	file://v3-1-2-em28xx-Ignore-errors-while-reading-from-eeprom.patch \
+	file://v3-2-2-em28xx-add-support-for-new-of-Terratec-H6.patch \
 	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
 	file://0003-uaccess-dont-mark-register-as-const.patch \
 	"
