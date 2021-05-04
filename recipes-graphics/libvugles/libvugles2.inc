@@ -25,4 +25,4 @@ do_install() {
 }
 
 PACKAGES = "${PN}"
-FILES_${PN}="${libdir} ${incdir}"
+FILES_${PN} = "${incdir} ${libdir}"

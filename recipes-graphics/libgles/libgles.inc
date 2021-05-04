@@ -1,44 +1,39 @@
+SUMMARY = "libgles for ${MACHINE}"
 SECTION = "base"
+PRIORITY = "required"
 LICENSE = "CLOSED"
+require conf/license/license-close.inc
 
-PROVIDES = "virtual/libgles2 virtual/egl"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "15.1"
+
 PR = "${SRCDATE}.${SRCDATE_PR}"
+
+PROVIDES = "virtual/libgles2 virtual/egl"
+PROVIDES += "libgles"
+RPROVIDES_${PN} += "libgles"
 
 SRC_URI = "http://code.vuplus.com/download/release/libgles/libgles-${MACHINE}-${PV}-${PR}.tar.gz"
 
 S = "${WORKDIR}/libgles-${MACHINE}"
 
-SRC_URI += "git://github.com/KhronosGroup/EGL-Registry;name=eglh;subpath=api;destsuffix=${S}/egl"
-SRCREV_eglh = "90b78b0662e2f0548cfd1926fb77bf628933541b"
-
-SRC_URI += "git://github.com/KhronosGroup/OpenGL-Registry;name=openglh;subpath=api;destsuffix=${S}/opengl"
-SRCREV_openglh = "8261133c2645aaeef880c5f5a6e327f399bc9d04"
-
-do_install_prepend() {
-	cp -fa ${S}/egl/EGL/* ${S}/include/EGL/
-	cp -fa ${S}/egl/KHR/* ${S}/include/KHR/
-	cp -fa ${S}/opengl/GLES/*.h ${S}/include/GLES/
-	cp -fa ${S}/opengl/GLES2/* ${S}/include/GLES2/
-}
+INHIBIT_PACKAGE_STRIP = "1"
+PRIVATE_LIBS_${PN} = "libEGL.so \
+libv3ddriver.so \
+libGLESv2.so"
 
 do_install() {
 	install -d ${D}${libdir}
 	install -m 0755 ${S}${base_libdir}/*.so ${D}${libdir}
 	ln -s libv3ddriver.so ${D}${libdir}/libEGL.so
 	ln -s libv3ddriver.so ${D}${libdir}/libGLESv2.so
-
 	install -d ${D}${includedir}
 	cp -fa ${S}/include/* ${D}${includedir}/
 }
 
-do_package_qa[noexec] = "1"
+do_package_qa() {
+}
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-FILES_SOLIBSDEV = ""
-FILES_${PN} = "${libdir}"
-
-RPROVIDES_${PN} = "libEGL.so libGLESv2.so libdvb_base.so libdvb_client.so libnxpl.so libv3ddriver.so"
-
-FILESEXTRAPATHS_prepend := "${THISDIR}/vuplus-libgles:"
+FILES_${PN} = "${libdir}/*"
+FILES_${PN}-dev = "${incdir}/*"
