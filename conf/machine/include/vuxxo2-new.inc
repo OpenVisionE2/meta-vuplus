@@ -9,4 +9,4 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	libvugles2-mipsel \
 	"
 
-MACHINE_FEATURES += "transcoding streamproxy blindscan-dvbs ctrlrc ci dvbproxy RCA"
+MACHINE_FEATURES += "transcoding streamproxy blindscan-dvbs ctrlrc ci dvbproxy RCA kodi19"
