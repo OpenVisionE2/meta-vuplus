@@ -85,3 +85,5 @@ EXTRA_ALSA = "vuplus"
 BLINDSCAN_BINARY = "vuplus_blindscan"
 
 RCNAME ?= "vu"
+
+DISPLAY_BRAND = "Vu+"

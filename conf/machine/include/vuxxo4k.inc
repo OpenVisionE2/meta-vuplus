@@ -84,3 +84,5 @@ EXTRA_OECONF_append_pn-transtreamproxy = " --enable-ext-pid"
 BLINDSCAN_BINARY = "vuplus_blindscan"
 
 RCNAME ?= "vu"
+
+DISPLAY_BRAND = "Vu+"

@@ -76,3 +76,5 @@ STB_PLATFORM = "vu1gen"
 BLINDSCAN_BINARY = "vuplus_blindscan"
 
 RCNAME ?= "vu"
+
+DISPLAY_BRAND = "Vu+"
