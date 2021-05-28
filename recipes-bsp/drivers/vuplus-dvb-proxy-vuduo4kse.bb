@@ -3,10 +3,10 @@ KV = "${PV}-1.17"
 
 require vuplus-dvb-proxy.inc
 
-SRCDATE = "20210407"
+SRCDATE = "20210527"
 SRCDATE_PR = "r0"
 
-SRC_URI[md5sum] = "dc8571a0155759691e9d2e61a6696880"
-SRC_URI[sha256sum] = "4cef80114867ab41ee0b095241edbe5e54d3b3a2663af9481daaf2668985ed3d"
+SRC_URI[md5sum] = "baf03fd45fbddaaf46f878b72a1f4571"
+SRC_URI[sha256sum] = "2fcfad875ab01639705deaeddb61221138dcfaee6caa50edf877ac1b790d8400"
 
 COMPATIBLE_MACHINE = "^(vuduo4kse)$"
