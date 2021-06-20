@@ -2,7 +2,7 @@ diff --git a/drivers/media/usb/em28xx/em28xx-cards.c b/drivers/media/usb/em28xx/
 index a12b599a1fa2..25e952b176ae 100644
 --- a/drivers/media/usb/em28xx/em28xx-cards.c
 +++ b/drivers/media/usb/em28xx/em28xx-cards.c
-@@ -1193,6 +1193,22 @@ struct em28xx_board em28xx_boards[] = {
+@@ -1163,6 +1163,22 @@
  		.i2c_speed    = EM28XX_I2C_CLK_WAIT_ENABLE |
  				EM28XX_I2C_FREQ_400_KHZ,
  	},
@@ -25,7 +25,7 @@ index a12b599a1fa2..25e952b176ae 100644
  	[EM2884_BOARD_HAUPPAUGE_WINTV_HVR_930C] = {
  		.name         = "Hauppauge WinTV HVR 930C",
  		.has_dvb      = 1,
-@@ -2496,6 +2512,8 @@ struct usb_device_id em28xx_id_table[] = {
+@@ -2437,6 +2453,8 @@
  			.driver_info = EM2884_BOARD_TERRATEC_H5 },
  	{ USB_DEVICE(0x0ccd, 0x10b6),	/* H5 Rev. 3 */
  			.driver_info = EM2884_BOARD_TERRATEC_H5 },
@@ -50,11 +50,11 @@ diff --git a/drivers/media/usb/em28xx/em28xx.h b/drivers/media/usb/em28xx/em28xx
 index e8d97d5ec161..88084f24f033 100644
 --- a/drivers/media/usb/em28xx/em28xx.h
 +++ b/drivers/media/usb/em28xx/em28xx.h
-@@ -148,6 +148,7 @@
+@@ -144,6 +144,7 @@
  #define EM2861_BOARD_LEADTEK_VC100                95
  #define EM28178_BOARD_TERRATEC_T2_STICK_HD        96
  #define EM2884_BOARD_ELGATO_EYETV_HYBRID_2008     97
 +#define EM2884_BOARD_TERRATEC_H6		  98
+ #define EM28174_BOARD_HAUPPAUGE_WINTV_DUALHD_DVB  99
  
  /* Limits minimum and default number of buffers */
- #define EM28XX_MIN_BUF 4
